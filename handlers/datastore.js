@@ -118,8 +118,8 @@ Datastore.init = function(cb) {
     folders.forEach( fn => {
         var stats = fs.statSync( './data/' + fn )
         if (stats.isDirectory()) {
-            outcomeArray.push( './data/' + fn + '/outcomes.csv' )
-            absoluteNumbersArray.push( './data/' + fn + '/numbers.csv' )
+            outcomeArray.push( {file:'./data/' + fn + '/outcomes.csv', prefix:fn} )
+            absoluteNumbersArray.push( {file:'./data/' + fn + '/numbers.csv', prefix:fn} )
         }
     } )
 
@@ -130,18 +130,22 @@ Datastore.init = function(cb) {
         console.log('FINISHED population')
         return true;
     }).then(_ => {
-        return Promise.all(outcomeArray.map(file => {
+        return Promise.all(outcomeArray.map(entry => {
+            var file = entry.file
             return Promise.promisify(Datastore.parse)(file).then(outcomeRows => {
                 outcomeRows.forEach((row) => {
+                    row.id = entry.prefix + '_' + row.id
                     Datastore.outcomeTypesCollection.insert(row)
                 })
             })
         }))
     }).then(_ => {
          console.log('starting absolute numbers')
-        return Promise.all(absoluteNumbersArray.map(file => {
+        return Promise.all(absoluteNumbersArray.map(entry => {
+            var file = entry.file
             return Promise.promisify(Datastore.parseAbsolute)(file).then(outcomeRows => {
                 outcomeRows.forEach((row) => {
+                    row.outcome = entry.prefix + '_' + row.outcome
                     Datastore.chancesCollection.insert(row)
                 })
             })
