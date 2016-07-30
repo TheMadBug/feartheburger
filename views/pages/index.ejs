@@ -4,83 +4,12 @@
     <% include ../partials/header.ejs %>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<title>Dance with the Reaper</title>
-		<link rel="stylesheet" href="js/jquery.slotmachine.min.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-		<script type="text/javascript" src="js/jquery.slotmachine.min.js"></script>
+		<link rel="stylesheet" href="stylesheets/jquery.slotmachine.min.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" />
 
-		<style>
-			/*
-			 * SlotMachine
-			 */
-			#randomize {
-				height: 600px;
-			}
-
-			#randomize .row > div.col-xs-4 {
-				padding-left: 35px;
-			}
-
-			#randomize .row > div.col-xs-4 > div {
-				padding-top: 40px;
-				padding-left: 40px;
-				background-color: #fff;
-				border-radius: 50%;
-				margin: auto;
-			}
-
-			.randomizeMachine {
-				/* width: 200px; */
-				height: 200px;
-			}
-
-			.btn-group-randomize {
-				margin: 0 auto;
-				margin-top: 30px;
-				width: auto;
-			}
-
-			.btn-group-randomize div {
-				width: auto !important;
-			}
-
-			#ranomizeButton {
-				width: 100%;
-				height: 200px;
-				background-color: #ff0000;
-				color: #ffffff;
-				font-size: 3em;
-			}
-
-		</style>
-		<script>
-			$(document).ready(function(){
-				var machine1 = $("#machine1").slotMachine({
-					active	: 0,
-					delay	: 500
-				});
-
-				function onComplete(active){
-					switch(this.element[0].id){
-						case 'machine1':
-							$("#machine1Result").text("Index: "+this.active);
-							break;
-						case 'machine2':
-							$("#machine2Result").text("Index: "+this.active);
-							break;
-						case 'machine3':
-							$("#machine3Result").text("Index: "+this.active);
-							break;
-					}
-				}
-
-				$("#ranomizeButton").click(function(){
-
-					machine1.shuffle(5, onComplete);
-
-				})
-			});
-		</script>
-
+		<script type="text/javascript" src="js/lib/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.slotmachine.min.js"></script>
+		<script type="text/javascript" src="js/feartheburger.js"></script>
 	</head>
 	<body>
 
