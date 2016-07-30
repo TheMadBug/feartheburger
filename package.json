@@ -10,8 +10,11 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "basic-csv": "0.0.2",
+    "bluebird": "^3.4.1",
     "ejs": "2.4.1",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "lokijs": "^1.4.1"
   },
   "repository": {
     "type": "git",
