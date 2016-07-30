@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
  * then call get to '/outcomesFor?demo=' + encodeURIComponent( JSON.stringify( demo ))
  */
 app.get('/outcomesFor', function(req, res) {
-  var demo = JSON.parse( req.param('demo') )
+  var demo = JSON.parse( req.query['demo'] )
 
   var results = Datastore.chancesFor( demo )
 

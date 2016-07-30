@@ -1,7 +1,6 @@
 var csv = require('basic-csv')
 var loki = require('lokijs')
 var Promise = require('bluebird')
-
 var Datastore = function() {}
 Datastore.outcomeTypesCollection = null;
 Datastore.chancesCollection = null;
@@ -86,8 +85,14 @@ Datastore.init = function(cb) {
 
     var promiseArray = [];
 
-    var outcomeArray = ['./data/crime/outcomes.csv']
-    var absoluteNumbersArray = ['./data/crime/physical_assult.csv']
+    var outcomeArray = [
+        './data/crime/outcomes.csv',
+        './data/TERRORISM/outcomes.csv'
+    ]
+    var absoluteNumbersArray = [
+        './data/crime/physical_assult.csv',
+        './data/TERRORISM/numbers.csv'
+    ]
 
     Promise.promisify(Datastore.parsePopulation)('./data/population.csv').then(populationRows => {
         populationRows.forEach((row) => {
@@ -106,6 +111,7 @@ Datastore.init = function(cb) {
         return Promise.all(absoluteNumbersArray.map(file => {
             return Promise.promisify(Datastore.parseAbsolute)(file).then(outcomeRows => {
                 outcomeRows.forEach((row) => {
+                    console.log(`Recording chance = ${JSON.stringify(row)}`)
                     Datastore.chancesCollection.insert(row)
                 })
             })
@@ -126,10 +132,10 @@ Datastore.chancesFor = function(person) {
         checkEq[key] = {$eq: value}
 
         var checkNull = {}
-        checkEq[key] = {$eq: null}
+        checkNull[key] = {$eq: null}
 
         var checkUndefined = {}
-        checkEq[key] = {$eq: undefined}
+        checkUndefined[key] = {$eq: undefined}
 
         queryAnds.push({$or:
             [
@@ -141,9 +147,25 @@ Datastore.chancesFor = function(person) {
         })
     })
     var query = {$and: queryAnds}
+    console.log(`query = ${JSON.stringify(query)}`)
     var rows = Datastore.chancesCollection.find(query)
 
-    return rows.map(row => {
+    console.log(`All relevant rows =`)
+    console.log(JSON.stringify(rows))
+
+    var uniqueRows = []
+    var uniqueRowMap = {};
+    rows.forEach(row => {
+        if (uniqueRowMap[row.outcome]) {
+            // combine the numbers
+            uniqueRowMap[row.outcome].chance += row.chance
+        } else {
+            uniqueRowMap[row.outcome] = row;
+            uniqueRows.push(row)
+        }
+    })
+
+    return uniqueRows.map(row => {
         var output = {}
         output.outcome = row.outcome
         output.chance = row.chance

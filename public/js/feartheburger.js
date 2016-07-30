@@ -1,6 +1,6 @@
 $(document).ready(function(){
     console.log("Populating causes of death");
-    
+
     // Add children to slot machine1
     var CAUSE_OF_DEATH = [
         {id : 'assault-image', name: "Assault"},
@@ -29,8 +29,11 @@ $(document).ready(function(){
     });
 
     function onComplete(active) {
+        //console.log("active=" + active);
         var data = CAUSE_OF_DEATH[active];
         var name = data["name"];
+        //console.log("name=" + name);
+
         $("#machine1Result").text(name);
     }
 
