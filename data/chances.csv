@@ -1,5 +1,6 @@
-outcome,chance,gender,foo
+outcome,chance,gender
 SHARK,0.002,M
 SHARK,0.001,F
 SNUSNU,0.0001,M
-FOO,100,,Bar
+BEAR ATTACK,0.50,M
+BEAR ATTACK,0.25,F

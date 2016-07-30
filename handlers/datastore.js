@@ -25,7 +25,6 @@ Datastore.parse = function(fileName, collection, cb) {
                 json[col] = value
             })
             collection.insert(json)
-            console.log(`Inserting ${JSON.stringify(json)}`)
         })
         console.log(`Finishing parsing ${fileName} have inserted ${collection.count()}`)
         cb(null,true)
@@ -68,16 +67,24 @@ Datastore.chancesFor = function(person) {
         })
     })
     let query = {$and: queryAnds}
-    console.log(`Querying choices with this ${JSON.stringify(query)}`)
     let rows = Datastore.chancesCollection.find(query)
 
-    rows.map(row => {
-        let object = {}
-        object.outcome = row.outcome
-        object.chance = row.chance
-        let outcomeRow = Datastore.outcomeTypesCollection.find({id: object.outcome})
+    return rows.map(row => {
+        let output = {}
+        output.outcome = row.outcome
+        output.chance = row.chance
+        let outcomeRow = Datastore.outcomeTypesCollection.findOne({id: row.outcome})
+        if (outcomeRow) {
+            output.valid = true;
+            Object.keys(outcomeRow).filter(key => {return key != 'meta' && key != '$loki'}).forEach(key => {
+                output[key] = outcomeRow[key]
+            });
+        } else {
+            output.valid = false;
+        }
+
+        return output
     })
-    return rows;
 }
 
 module.exports = Datastore
