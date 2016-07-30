@@ -5,7 +5,7 @@ window.userProfile = {
     regional: null,
 };
 
-MAX_SLOT_ELEMENTS = 10; //9999;
+MAX_SLOT_ELEMENTS = 9999;
 IMG_PATH = "/img/flat/";
 GENDER_LOOKUP = {"M" : "Male", "F" : "Female"};
 REGION_LOOKUP = ["Non-regional", "Regional"];
@@ -135,7 +135,7 @@ function setupMain() {
             delay	: 500,
             randomize : function(activeElementIndex) {
                 // Compensates for the 1 added from FAKE_TOP
-                return 1 + Math.random() * (data.length - 1);
+                return 1 + Math.floor(Math.random() * data.length);
             }
         });
     };
