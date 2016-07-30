@@ -1,2 +1,2 @@
-id,name
-PHYSICAL_ASSULT,Physical Assult
+id,name,category
+PHYSICAL_ASSULT,Physical Assult,CRIME
