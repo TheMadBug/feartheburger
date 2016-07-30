@@ -1,9 +1,27 @@
 window.userProfile = {
+    gender: null,
     age: null,
     state: null,
-    gender: null,
     regional: null,
 };
+
+function getOutcomes(category, callBackFunc) {
+    var DEMO_KEYS = ["gender", "age", "state", "regional"];
+    var demo = {};
+    for (var i=0 ; i<DEMO_KEYS.length ; ++i) {
+        var k = DEMO_KEYS[i];
+        var val = userProfile[k];
+        if (val != null) {
+            demo[k] = val;
+        }
+    }
+
+    var demoStr = 'demo=' + encodeURIComponent( JSON.stringify( demo ));
+    var categoryStr = '&category=' + category;
+    var url = '/outcomesFor?' + demoStr + categoryStr;
+    $.get(url, callBackFunc);
+}
+
 
 function showPanel(panelSelect) {
     $(".panel", ".main-panel").hide();
@@ -18,40 +36,52 @@ function showButton(buttonSelect) {
 function setupMain() {
     console.log("Setup Main");
 
-    // Add children to slot machine1
-    var CAUSE_OF_DEATH = [
-        {id : 'assault-image', name: "Assault"},
-        {id : 'terrorism-image', name: "Terrorism"},
-        {id : 'cancer-image', name: "Cancer"},
-        {id : 'car-image', name: "Car"},
-        {id : 'heart-image', name: "Heart"},
-        {id : 'motorbike-image', name: "Motorbike"},
-        {id : 'suicide-image', name: "Suicide"},
-        {id : 'poison-image', name: "Poison"},
-        {id : 'shark-image', name: "Shark Attack"},
-    ];
-    
-    for (var i=0 ; i<CAUSE_OF_DEATH.length; ++i) {
-        var data = CAUSE_OF_DEATH[i];
-        jQuery('<div/>', {
-            id: data['id'],
-            class: 'cause-of-death-image',
-            name: data['name'],
-        }).appendTo('#machine1');
-    }
+    // So - need to go through this, and using the chance, pick out X (enough for the )
+    var populateData = function(data) {
+        // {"outcome" : "GRIM_Stroke", "chance":0.03115690731391455, "valid":true,"id":"GRIM_Stroke","name":"Stroke","text":null,
+        // "icon":"heart.png", "category":"DEATH"}
 
-    var machine1 = $("#machine1").slotMachine({
-        active	: 0,
-        delay	: 500
-    });
+        // TODO: clear any old ones.
+
+        for (var i=0 ; i<Math.max(data.length, 10) ; ++i) {
+            var record = data[i];
+            if (record["valid"] && record["icon"]) {
+                var outcome = record["outcome"];
+                var chance = record["chance"];
+                var id = record["id"];
+                var name = record["name"];
+                var text = record["text"];
+                var icon = record["icon"];
+
+                var img_path = "/img/flat/" + record["icon"];
+
+                jQuery('<img/>', {
+                    src: img_path,
+                    class: 'cause-of-death-image',
+                    name: name,
+                }).appendTo('#machine1');
+            }
+        }
+        console.log(data.length + " rows of data returned");
+
+        console.log("done with outcomes")
+
+        machine1 = $("#machine1").slotMachine({
+            active	: 0,
+            delay	: 500
+        });
+    };
+
+    getOutcomes("DEATH", populateData);
+
 
     function onComplete(active) {
         //console.log("active=" + active);
-        var data = CAUSE_OF_DEATH[active];
-        var name = data["name"];
+//        var data = CAUSE_OF_DEATH[active];
+ //       var name = data["name"];
         //console.log("name=" + name);
 
-        $("#machine1Result").text(name);
+//        $("#machine1Result").text(name);
     }
 
     $("#spinButton").click(function(){
