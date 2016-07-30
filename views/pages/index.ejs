@@ -4,47 +4,35 @@
     <% include ../partials/header.ejs %>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<title>Dance with the Reaper</title>
-		<link rel="stylesheet" href="stylesheets/jquery.slotmachine.min.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" />
-
-		<script type="text/javascript" src="js/lib/jquery-3.1.0.min.js"></script>
-		<script type="text/javascript" src="js/lib/jquery.slotmachine.min.js"></script>
-		<script type="text/javascript" src="js/feartheburger.js"></script>
 	</head>
 	<body>
 
   <% include ../partials/nav.ejs %>
 
-		<div id="randomize">
-			<div class="content container" style="text-align: center;max-width: 900px;">
-				<h1>What's going to kill me?</h1>
+    <div class="container-fluid main-panel">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Whats gonna kill me?
+        </div>
+        <div class="panel-body randomize">
+            <p>65 year old male</p>
 
-				<p>65 year old male
-				</p>
-
-				<div class="row">
-					<div class="col-xs-4">
-						<div>
-							<div id="machine1" class="randomizeMachine">
-								<div><img src="img/poison.jpg" /></div>
-								<div><img src="img/shark.jpg" /></div>
-								<div><img src="img/suicide.png" /></div>
-								<div><img src="img/heart.jpg" /></div>
-								<div><img src="img/cancer.jpg" /></div>
-								<div><img src="img/lightning.png" /></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="machine1Result" class="col-xs-4 machineResult"></div>
-
-				<div>
-					<div class="btn-group btn-group-justified btn-group-randomize" role="group">
-						<div id="ranomizeButton" type="button" class="btn btn-danger btn-lg">SPIN</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+            <div class="row">
+              <div>
+                <div>
+                  <div id="machine1" class="randomizeMachine">
+                  </div>
+                </div>
+              </div>
+            </div>
+    				<div id="machine1Result" class="machineResult"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer" data-spy="affix-bottom">
+      <div class="container-fluid">
+			    <div id="ranomizeButton" type="button" class="btn btn-danger btn-lg">SPIN</div>
+      </div>
+    </footer>
 	</body>
 </html>
