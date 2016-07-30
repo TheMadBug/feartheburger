@@ -1,0 +1,1621 @@
+id,age,gender,number
+Dementia and Alzheimer disease,0-4,M,0
+Dementia and Alzheimer disease,5-9,M,0
+Dementia and Alzheimer disease,10-14,M,0
+Dementia and Alzheimer disease,15-19,M,0
+Dementia and Alzheimer disease,20-24,M,0
+Dementia and Alzheimer disease,25-29,M,0
+Dementia and Alzheimer disease,30-34,M,0
+Dementia and Alzheimer disease,35-39,M,0
+Dementia and Alzheimer disease,40-44,M,1
+Dementia and Alzheimer disease,45-49,M,2
+Dementia and Alzheimer disease,50-54,M,5
+Dementia and Alzheimer disease,55-59,M,10
+Dementia and Alzheimer disease,60-64,M,23
+Dementia and Alzheimer disease,65-69,M,62
+Dementia and Alzheimer disease,70-74,M,162
+Dementia and Alzheimer disease,75-79,M,435
+Dementia and Alzheimer disease,80-84,M,826
+Dementia and Alzheimer disease,85+,M,2130
+Dementia and Alzheimer disease,0-4,F,0
+Dementia and Alzheimer disease,5-9,F,0
+Dementia and Alzheimer disease,10-14,F,0
+Dementia and Alzheimer disease,15-19,F,0
+Dementia and Alzheimer disease,20-24,F,0
+Dementia and Alzheimer disease,25-29,F,0
+Dementia and Alzheimer disease,30-34,F,0
+Dementia and Alzheimer disease,35-39,F,1
+Dementia and Alzheimer disease,40-44,F,1
+Dementia and Alzheimer disease,45-49,F,0
+Dementia and Alzheimer disease,50-54,F,2
+Dementia and Alzheimer disease,55-59,F,13
+Dementia and Alzheimer disease,60-64,F,30
+Dementia and Alzheimer disease,65-69,F,63
+Dementia and Alzheimer disease,70-74,F,182
+Dementia and Alzheimer disease,75-79,F,453
+Dementia and Alzheimer disease,80-84,F,1127
+Dementia and Alzheimer disease,85+,F,5405
+Chronic kidney disease,0-4,M,14
+Chronic kidney disease,5-9,M,0
+Chronic kidney disease,10-14,M,0
+Chronic kidney disease,15-19,M,0
+Chronic kidney disease,20-24,M,3
+Chronic kidney disease,25-29,M,5
+Chronic kidney disease,30-34,M,2
+Chronic kidney disease,35-39,M,0
+Chronic kidney disease,40-44,M,10
+Chronic kidney disease,45-49,M,29
+Chronic kidney disease,50-54,M,28
+Chronic kidney disease,55-59,M,43
+Chronic kidney disease,60-64,M,67
+Chronic kidney disease,65-69,M,100
+Chronic kidney disease,70-74,M,171
+Chronic kidney disease,75-79,M,236
+Chronic kidney disease,80-84,M,391
+Chronic kidney disease,85+,M,777
+Chronic kidney disease,0-4,F,5
+Chronic kidney disease,5-9,F,0
+Chronic kidney disease,10-14,F,1
+Chronic kidney disease,15-19,F,0
+Chronic kidney disease,20-24,F,3
+Chronic kidney disease,25-29,F,1
+Chronic kidney disease,30-34,F,7
+Chronic kidney disease,35-39,F,5
+Chronic kidney disease,40-44,F,7
+Chronic kidney disease,45-49,F,18
+Chronic kidney disease,50-54,F,23
+Chronic kidney disease,55-59,F,34
+Chronic kidney disease,60-64,F,46
+Chronic kidney disease,65-69,F,74
+Chronic kidney disease,70-74,F,123
+Chronic kidney disease,75-79,F,183
+Chronic kidney disease,80-84,F,329
+Chronic kidney disease,85+,F,1099
+All certain infectious and parasitic diseases,0-4,M,16
+All certain infectious and parasitic diseases,5-9,M,4
+All certain infectious and parasitic diseases,10-14,M,2
+All certain infectious and parasitic diseases,15-19,M,2
+All certain infectious and parasitic diseases,20-24,M,4
+All certain infectious and parasitic diseases,25-29,M,4
+All certain infectious and parasitic diseases,30-34,M,6
+All certain infectious and parasitic diseases,35-39,M,12
+All certain infectious and parasitic diseases,40-44,M,30
+All certain infectious and parasitic diseases,45-49,M,44
+All certain infectious and parasitic diseases,50-54,M,71
+All certain infectious and parasitic diseases,55-59,M,92
+All certain infectious and parasitic diseases,60-64,M,80
+All certain infectious and parasitic diseases,65-69,M,97
+All certain infectious and parasitic diseases,70-74,M,101
+All certain infectious and parasitic diseases,75-79,M,146
+All certain infectious and parasitic diseases,80-84,M,224
+All certain infectious and parasitic diseases,85+,M,385
+All certain infectious and parasitic diseases,0-4,F,10
+All certain infectious and parasitic diseases,5-9,F,0
+All certain infectious and parasitic diseases,10-14,F,0
+All certain infectious and parasitic diseases,15-19,F,3
+All certain infectious and parasitic diseases,20-24,F,2
+All certain infectious and parasitic diseases,25-29,F,2
+All certain infectious and parasitic diseases,30-34,F,5
+All certain infectious and parasitic diseases,35-39,F,11
+All certain infectious and parasitic diseases,40-44,F,14
+All certain infectious and parasitic diseases,45-49,F,26
+All certain infectious and parasitic diseases,50-54,F,35
+All certain infectious and parasitic diseases,55-59,F,55
+All certain infectious and parasitic diseases,60-64,F,47
+All certain infectious and parasitic diseases,65-69,F,60
+All certain infectious and parasitic diseases,70-74,F,84
+All certain infectious and parasitic diseases,75-79,F,131
+All certain infectious and parasitic diseases,80-84,F,192
+All certain infectious and parasitic diseases,85+,F,679
+All neoplasms,0-4,M,22
+All neoplasms,5-9,M,16
+All neoplasms,10-14,M,14
+All neoplasms,15-19,M,24
+All neoplasms,20-24,M,30
+All neoplasms,25-29,M,67
+All neoplasms,30-34,M,72
+All neoplasms,35-39,M,122
+All neoplasms,40-44,M,233
+All neoplasms,45-49,M,492
+All neoplasms,50-54,M,927
+All neoplasms,55-59,M,1459
+All neoplasms,60-64,M,2264
+All neoplasms,65-69,M,3254
+All neoplasms,70-74,M,3493
+All neoplasms,75-79,M,3764
+All neoplasms,80-84,M,4042
+All neoplasms,85+,M,4939
+All neoplasms,0-4,F,24
+All neoplasms,5-9,F,14
+All neoplasms,10-14,F,17
+All neoplasms,15-19,F,22
+All neoplasms,20-24,F,24
+All neoplasms,25-29,F,48
+All neoplasms,30-34,F,93
+All neoplasms,35-39,F,152
+All neoplasms,40-44,F,301
+All neoplasms,45-49,F,502
+All neoplasms,50-54,F,865
+All neoplasms,55-59,F,1213
+All neoplasms,60-64,F,1644
+All neoplasms,65-69,F,2117
+All neoplasms,70-74,F,2235
+All neoplasms,75-79,F,2496
+All neoplasms,80-84,F,2893
+All neoplasms,85+,F,4777
+Breast cancer,0-4,M,0
+Breast cancer,5-9,M,0
+Breast cancer,10-14,M,0
+Breast cancer,15-19,M,0
+Breast cancer,20-24,M,0
+Breast cancer,25-29,M,0
+Breast cancer,30-34,M,0
+Breast cancer,35-39,M,0
+Breast cancer,40-44,M,0
+Breast cancer,45-49,M,2
+Breast cancer,50-54,M,2
+Breast cancer,55-59,M,0
+Breast cancer,60-64,M,3
+Breast cancer,65-69,M,7
+Breast cancer,70-74,M,2
+Breast cancer,75-79,M,2
+Breast cancer,80-84,M,8
+Breast cancer,85+,M,4
+Breast cancer,0-4,F,0
+Breast cancer,5-9,F,0
+Breast cancer,10-14,F,0
+Breast cancer,15-19,F,0
+Breast cancer,20-24,F,0
+Breast cancer,25-29,F,5
+Breast cancer,30-34,F,9
+Breast cancer,35-39,F,47
+Breast cancer,40-44,F,90
+Breast cancer,45-49,F,153
+Breast cancer,50-54,F,238
+Breast cancer,55-59,F,271
+Breast cancer,60-64,F,302
+Breast cancer,65-69,F,328
+Breast cancer,70-74,F,280
+Breast cancer,75-79,F,274
+Breast cancer,80-84,F,321
+Breast cancer,85+,F,544
+Colorectal cancer,0-4,M,0
+Colorectal cancer,5-9,M,0
+Colorectal cancer,10-14,M,0
+Colorectal cancer,15-19,M,0
+Colorectal cancer,20-24,M,1
+Colorectal cancer,25-29,M,12
+Colorectal cancer,30-34,M,8
+Colorectal cancer,35-39,M,13
+Colorectal cancer,40-44,M,27
+Colorectal cancer,45-49,M,51
+Colorectal cancer,50-54,M,102
+Colorectal cancer,55-59,M,137
+Colorectal cancer,60-64,M,229
+Colorectal cancer,65-69,M,297
+Colorectal cancer,70-74,M,347
+Colorectal cancer,75-79,M,355
+Colorectal cancer,80-84,M,332
+Colorectal cancer,85+,M,420
+Colorectal cancer,0-4,F,0
+Colorectal cancer,5-9,F,0
+Colorectal cancer,10-14,F,0
+Colorectal cancer,15-19,F,0
+Colorectal cancer,20-24,F,1
+Colorectal cancer,25-29,F,8
+Colorectal cancer,30-34,F,15
+Colorectal cancer,35-39,F,14
+Colorectal cancer,40-44,F,20
+Colorectal cancer,45-49,F,49
+Colorectal cancer,50-54,F,71
+Colorectal cancer,55-59,F,100
+Colorectal cancer,60-64,F,120
+Colorectal cancer,65-69,F,174
+Colorectal cancer,70-74,F,189
+Colorectal cancer,75-79,F,263
+Colorectal cancer,80-84,F,319
+Colorectal cancer,85+,F,559
+Lung cancer,0-4,M,0
+Lung cancer,5-9,M,0
+Lung cancer,10-14,M,0
+Lung cancer,15-19,M,0
+Lung cancer,20-24,M,0
+Lung cancer,25-29,M,1
+Lung cancer,30-34,M,5
+Lung cancer,35-39,M,10
+Lung cancer,40-44,M,28
+Lung cancer,45-49,M,71
+Lung cancer,50-54,M,182
+Lung cancer,55-59,M,330
+Lung cancer,60-64,M,504
+Lung cancer,65-69,M,777
+Lung cancer,70-74,M,865
+Lung cancer,75-79,M,790
+Lung cancer,80-84,M,738
+Lung cancer,85+,M,694
+Lung cancer,0-4,F,0
+Lung cancer,5-9,F,1
+Lung cancer,10-14,F,0
+Lung cancer,15-19,F,0
+Lung cancer,20-24,F,0
+Lung cancer,25-29,F,1
+Lung cancer,30-34,F,4
+Lung cancer,35-39,F,7
+Lung cancer,40-44,F,26
+Lung cancer,45-49,F,60
+Lung cancer,50-54,F,161
+Lung cancer,55-59,F,225
+Lung cancer,60-64,F,324
+Lung cancer,65-69,F,454
+Lung cancer,70-74,F,498
+Lung cancer,75-79,F,485
+Lung cancer,80-84,F,454
+Lung cancer,85+,F,521
+Melanoma,0-4,M,0
+Melanoma,5-9,M,0
+Melanoma,10-14,M,0
+Melanoma,15-19,M,0
+Melanoma,20-24,M,0
+Melanoma,25-29,M,5
+Melanoma,30-34,M,7
+Melanoma,35-39,M,10
+Melanoma,40-44,M,28
+Melanoma,45-49,M,34
+Melanoma,50-54,M,63
+Melanoma,55-59,M,73
+Melanoma,60-64,M,115
+Melanoma,65-69,M,147
+Melanoma,70-74,M,135
+Melanoma,75-79,M,144
+Melanoma,80-84,M,178
+Melanoma,85+,M,168
+Melanoma,0-4,F,0
+Melanoma,5-9,F,0
+Melanoma,10-14,F,0
+Melanoma,15-19,F,0
+Melanoma,20-24,F,0
+Melanoma,25-29,F,3
+Melanoma,30-34,F,9
+Melanoma,35-39,F,11
+Melanoma,40-44,F,21
+Melanoma,45-49,F,28
+Melanoma,50-54,F,39
+Melanoma,55-59,F,41
+Melanoma,60-64,F,40
+Melanoma,65-69,F,43
+Melanoma,70-74,F,47
+Melanoma,75-79,F,51
+Melanoma,80-84,F,70
+Melanoma,85+,F,107
+Pancreatic cancer,0-4,M,0
+Pancreatic cancer,5-9,M,1
+Pancreatic cancer,10-14,M,0
+Pancreatic cancer,15-19,M,0
+Pancreatic cancer,20-24,M,0
+Pancreatic cancer,25-29,M,0
+Pancreatic cancer,30-34,M,1
+Pancreatic cancer,35-39,M,4
+Pancreatic cancer,40-44,M,18
+Pancreatic cancer,45-49,M,35
+Pancreatic cancer,50-54,M,49
+Pancreatic cancer,55-59,M,91
+Pancreatic cancer,60-64,M,137
+Pancreatic cancer,65-69,M,206
+Pancreatic cancer,70-74,M,224
+Pancreatic cancer,75-79,M,190
+Pancreatic cancer,80-84,M,204
+Pancreatic cancer,85+,M,175
+Pancreatic cancer,0-4,F,0
+Pancreatic cancer,5-9,F,0
+Pancreatic cancer,10-14,F,0
+Pancreatic cancer,15-19,F,0
+Pancreatic cancer,20-24,F,0
+Pancreatic cancer,25-29,F,0
+Pancreatic cancer,30-34,F,1
+Pancreatic cancer,35-39,F,1
+Pancreatic cancer,40-44,F,8
+Pancreatic cancer,45-49,F,9
+Pancreatic cancer,50-54,F,32
+Pancreatic cancer,55-59,F,66
+Pancreatic cancer,60-64,F,121
+Pancreatic cancer,65-69,F,147
+Pancreatic cancer,70-74,F,164
+Pancreatic cancer,75-79,F,173
+Pancreatic cancer,80-84,F,198
+Pancreatic cancer,85+,F,303
+Prostate cancer,0-4,M,0
+Prostate cancer,5-9,M,0
+Prostate cancer,10-14,M,0
+Prostate cancer,15-19,M,0
+Prostate cancer,20-24,M,0
+Prostate cancer,25-29,M,0
+Prostate cancer,30-34,M,0
+Prostate cancer,35-39,M,0
+Prostate cancer,40-44,M,2
+Prostate cancer,45-49,M,6
+Prostate cancer,50-54,M,16
+Prostate cancer,55-59,M,41
+Prostate cancer,60-64,M,123
+Prostate cancer,65-69,M,268
+Prostate cancer,70-74,M,329
+Prostate cancer,75-79,M,472
+Prostate cancer,80-84,M,696
+Prostate cancer,85+,M,1159
+Prostate cancer,0-4,F,0
+Prostate cancer,5-9,F,0
+Prostate cancer,10-14,F,0
+Prostate cancer,15-19,F,0
+Prostate cancer,20-24,F,0
+Prostate cancer,25-29,F,0
+Prostate cancer,30-34,F,0
+Prostate cancer,35-39,F,0
+Prostate cancer,40-44,F,0
+Prostate cancer,45-49,F,0
+Prostate cancer,50-54,F,0
+Prostate cancer,55-59,F,0
+Prostate cancer,60-64,F,0
+Prostate cancer,65-69,F,0
+Prostate cancer,70-74,F,0
+Prostate cancer,75-79,F,0
+Prostate cancer,80-84,F,0
+Prostate cancer,85+,F,0
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,0-4,M,4
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,5-9,M,2
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,10-14,M,0
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,15-19,M,1
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,20-24,M,0
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,25-29,M,1
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,30-34,M,1
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,35-39,M,1
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,40-44,M,5
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,45-49,M,3
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,50-54,M,4
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,55-59,M,8
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,60-64,M,7
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,65-69,M,26
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,70-74,M,21
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,75-79,M,23
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,80-84,M,34
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,85+,M,77
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,0-4,F,4
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,5-9,F,1
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,10-14,F,1
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,15-19,F,1
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,20-24,F,6
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,25-29,F,2
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,30-34,F,2
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,35-39,F,4
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,40-44,F,8
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,45-49,F,6
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,50-54,F,9
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,55-59,F,11
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,60-64,F,8
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,65-69,F,15
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,70-74,F,14
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,75-79,F,23
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,80-84,F,34
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,85+,F,133
+"All endocrine, nutritional and metabolic diseases",0-4,M,16
+"All endocrine, nutritional and metabolic diseases",5-9,M,2
+"All endocrine, nutritional and metabolic diseases",10-14,M,0
+"All endocrine, nutritional and metabolic diseases",15-19,M,5
+"All endocrine, nutritional and metabolic diseases",20-24,M,8
+"All endocrine, nutritional and metabolic diseases",25-29,M,21
+"All endocrine, nutritional and metabolic diseases",30-34,M,13
+"All endocrine, nutritional and metabolic diseases",35-39,M,17
+"All endocrine, nutritional and metabolic diseases",40-44,M,26
+"All endocrine, nutritional and metabolic diseases",45-49,M,67
+"All endocrine, nutritional and metabolic diseases",50-54,M,86
+"All endocrine, nutritional and metabolic diseases",55-59,M,121
+"All endocrine, nutritional and metabolic diseases",60-64,M,176
+"All endocrine, nutritional and metabolic diseases",65-69,M,275
+"All endocrine, nutritional and metabolic diseases",70-74,M,381
+"All endocrine, nutritional and metabolic diseases",75-79,M,429
+"All endocrine, nutritional and metabolic diseases",80-84,M,575
+"All endocrine, nutritional and metabolic diseases",85+,M,872
+"All endocrine, nutritional and metabolic diseases",0-4,F,13
+"All endocrine, nutritional and metabolic diseases",5-9,F,2
+"All endocrine, nutritional and metabolic diseases",10-14,F,2
+"All endocrine, nutritional and metabolic diseases",15-19,F,6
+"All endocrine, nutritional and metabolic diseases",20-24,F,3
+"All endocrine, nutritional and metabolic diseases",25-29,F,7
+"All endocrine, nutritional and metabolic diseases",30-34,F,15
+"All endocrine, nutritional and metabolic diseases",35-39,F,12
+"All endocrine, nutritional and metabolic diseases",40-44,F,32
+"All endocrine, nutritional and metabolic diseases",45-49,F,36
+"All endocrine, nutritional and metabolic diseases",50-54,F,51
+"All endocrine, nutritional and metabolic diseases",55-59,F,71
+"All endocrine, nutritional and metabolic diseases",60-64,F,113
+"All endocrine, nutritional and metabolic diseases",65-69,F,143
+"All endocrine, nutritional and metabolic diseases",70-74,F,223
+"All endocrine, nutritional and metabolic diseases",75-79,F,309
+"All endocrine, nutritional and metabolic diseases",80-84,F,560
+"All endocrine, nutritional and metabolic diseases",85+,F,1413
+Diabetes,0-4,M,0
+Diabetes,5-9,M,0
+Diabetes,10-14,M,0
+Diabetes,15-19,M,1
+Diabetes,20-24,M,1
+Diabetes,25-29,M,8
+Diabetes,30-34,M,6
+Diabetes,35-39,M,6
+Diabetes,40-44,M,15
+Diabetes,45-49,M,45
+Diabetes,50-54,M,51
+Diabetes,55-59,M,80
+Diabetes,60-64,M,127
+Diabetes,65-69,M,206
+Diabetes,70-74,M,293
+Diabetes,75-79,M,341
+Diabetes,80-84,M,444
+Diabetes,85+,M,674
+Diabetes,0-4,F,0
+Diabetes,5-9,F,0
+Diabetes,10-14,F,0
+Diabetes,15-19,F,0
+Diabetes,20-24,F,2
+Diabetes,25-29,F,1
+Diabetes,30-34,F,13
+Diabetes,35-39,F,5
+Diabetes,40-44,F,18
+Diabetes,45-49,F,14
+Diabetes,50-54,F,30
+Diabetes,55-59,F,43
+Diabetes,60-64,F,86
+Diabetes,65-69,F,92
+Diabetes,70-74,F,163
+Diabetes,75-79,F,226
+Diabetes,80-84,F,400
+Diabetes,85+,F,937
+All mental and behavioural disorders,0-4,M,0
+All mental and behavioural disorders,5-9,M,0
+All mental and behavioural disorders,10-14,M,0
+All mental and behavioural disorders,15-19,M,0
+All mental and behavioural disorders,20-24,M,1
+All mental and behavioural disorders,25-29,M,1
+All mental and behavioural disorders,30-34,M,4
+All mental and behavioural disorders,35-39,M,7
+All mental and behavioural disorders,40-44,M,11
+All mental and behavioural disorders,45-49,M,23
+All mental and behavioural disorders,50-54,M,27
+All mental and behavioural disorders,55-59,M,40
+All mental and behavioural disorders,60-64,M,43
+All mental and behavioural disorders,65-69,M,68
+All mental and behavioural disorders,70-74,M,132
+All mental and behavioural disorders,75-79,M,319
+All mental and behavioural disorders,80-84,M,618
+All mental and behavioural disorders,85+,M,1661
+All mental and behavioural disorders,0-4,F,0
+All mental and behavioural disorders,5-9,F,0
+All mental and behavioural disorders,10-14,F,1
+All mental and behavioural disorders,15-19,F,0
+All mental and behavioural disorders,20-24,F,1
+All mental and behavioural disorders,25-29,F,1
+All mental and behavioural disorders,30-34,F,1
+All mental and behavioural disorders,35-39,F,6
+All mental and behavioural disorders,40-44,F,6
+All mental and behavioural disorders,45-49,F,10
+All mental and behavioural disorders,50-54,F,10
+All mental and behavioural disorders,55-59,F,16
+All mental and behavioural disorders,60-64,F,29
+All mental and behavioural disorders,65-69,F,49
+All mental and behavioural disorders,70-74,F,130
+All mental and behavioural disorders,75-79,F,301
+All mental and behavioural disorders,80-84,F,747
+All mental and behavioural disorders,85+,F,3937
+All diseases of the nervous system,0-4,M,20
+All diseases of the nervous system,5-9,M,15
+All diseases of the nervous system,10-14,M,9
+All diseases of the nervous system,15-19,M,18
+All diseases of the nervous system,20-24,M,26
+All diseases of the nervous system,25-29,M,22
+All diseases of the nervous system,30-34,M,23
+All diseases of the nervous system,35-39,M,26
+All diseases of the nervous system,40-44,M,49
+All diseases of the nervous system,45-49,M,41
+All diseases of the nervous system,50-54,M,66
+All diseases of the nervous system,55-59,M,114
+All diseases of the nervous system,60-64,M,122
+All diseases of the nervous system,65-69,M,189
+All diseases of the nervous system,70-74,M,325
+All diseases of the nervous system,75-79,M,548
+All diseases of the nervous system,80-84,M,655
+All diseases of the nervous system,85+,M,1103
+All diseases of the nervous system,0-4,F,19
+All diseases of the nervous system,5-9,F,9
+All diseases of the nervous system,10-14,F,9
+All diseases of the nervous system,15-19,F,10
+All diseases of the nervous system,20-24,F,8
+All diseases of the nervous system,25-29,F,9
+All diseases of the nervous system,30-34,F,17
+All diseases of the nervous system,35-39,F,16
+All diseases of the nervous system,40-44,F,27
+All diseases of the nervous system,45-49,F,41
+All diseases of the nervous system,50-54,F,49
+All diseases of the nervous system,55-59,F,87
+All diseases of the nervous system,60-64,F,138
+All diseases of the nervous system,65-69,F,168
+All diseases of the nervous system,70-74,F,253
+All diseases of the nervous system,75-79,F,428
+All diseases of the nervous system,80-84,F,720
+All diseases of the nervous system,85+,F,2134
+All diseases of the eye and adnexa,0-4,M,0
+All diseases of the eye and adnexa,5-9,M,0
+All diseases of the eye and adnexa,10-14,M,0
+All diseases of the eye and adnexa,15-19,M,0
+All diseases of the eye and adnexa,20-24,M,0
+All diseases of the eye and adnexa,25-29,M,0
+All diseases of the eye and adnexa,30-34,M,0
+All diseases of the eye and adnexa,35-39,M,0
+All diseases of the eye and adnexa,40-44,M,0
+All diseases of the eye and adnexa,45-49,M,0
+All diseases of the eye and adnexa,50-54,M,0
+All diseases of the eye and adnexa,55-59,M,0
+All diseases of the eye and adnexa,60-64,M,0
+All diseases of the eye and adnexa,65-69,M,0
+All diseases of the eye and adnexa,70-74,M,0
+All diseases of the eye and adnexa,75-79,M,0
+All diseases of the eye and adnexa,80-84,M,0
+All diseases of the eye and adnexa,85+,M,1
+All diseases of the eye and adnexa,0-4,F,0
+All diseases of the eye and adnexa,5-9,F,0
+All diseases of the eye and adnexa,10-14,F,0
+All diseases of the eye and adnexa,15-19,F,0
+All diseases of the eye and adnexa,20-24,F,0
+All diseases of the eye and adnexa,25-29,F,0
+All diseases of the eye and adnexa,30-34,F,0
+All diseases of the eye and adnexa,35-39,F,0
+All diseases of the eye and adnexa,40-44,F,0
+All diseases of the eye and adnexa,45-49,F,0
+All diseases of the eye and adnexa,50-54,F,0
+All diseases of the eye and adnexa,55-59,F,0
+All diseases of the eye and adnexa,60-64,F,0
+All diseases of the eye and adnexa,65-69,F,0
+All diseases of the eye and adnexa,70-74,F,0
+All diseases of the eye and adnexa,75-79,F,0
+All diseases of the eye and adnexa,80-84,F,1
+All diseases of the eye and adnexa,85+,F,2
+All diseases of the ear and mastoid process,0-4,M,1
+All diseases of the ear and mastoid process,5-9,M,1
+All diseases of the ear and mastoid process,10-14,M,0
+All diseases of the ear and mastoid process,15-19,M,0
+All diseases of the ear and mastoid process,20-24,M,0
+All diseases of the ear and mastoid process,25-29,M,0
+All diseases of the ear and mastoid process,30-34,M,0
+All diseases of the ear and mastoid process,35-39,M,0
+All diseases of the ear and mastoid process,40-44,M,0
+All diseases of the ear and mastoid process,45-49,M,0
+All diseases of the ear and mastoid process,50-54,M,1
+All diseases of the ear and mastoid process,55-59,M,0
+All diseases of the ear and mastoid process,60-64,M,1
+All diseases of the ear and mastoid process,65-69,M,0
+All diseases of the ear and mastoid process,70-74,M,0
+All diseases of the ear and mastoid process,75-79,M,1
+All diseases of the ear and mastoid process,80-84,M,0
+All diseases of the ear and mastoid process,85+,M,2
+All diseases of the ear and mastoid process,0-4,F,0
+All diseases of the ear and mastoid process,5-9,F,0
+All diseases of the ear and mastoid process,10-14,F,0
+All diseases of the ear and mastoid process,15-19,F,0
+All diseases of the ear and mastoid process,20-24,F,0
+All diseases of the ear and mastoid process,25-29,F,0
+All diseases of the ear and mastoid process,30-34,F,0
+All diseases of the ear and mastoid process,35-39,F,0
+All diseases of the ear and mastoid process,40-44,F,0
+All diseases of the ear and mastoid process,45-49,F,0
+All diseases of the ear and mastoid process,50-54,F,0
+All diseases of the ear and mastoid process,55-59,F,0
+All diseases of the ear and mastoid process,60-64,F,0
+All diseases of the ear and mastoid process,65-69,F,0
+All diseases of the ear and mastoid process,70-74,F,0
+All diseases of the ear and mastoid process,75-79,F,0
+All diseases of the ear and mastoid process,80-84,F,0
+All diseases of the ear and mastoid process,85+,F,2
+All diseases of the circulatory system,0-4,M,16
+All diseases of the circulatory system,5-9,M,3
+All diseases of the circulatory system,10-14,M,5
+All diseases of the circulatory system,15-19,M,6
+All diseases of the circulatory system,20-24,M,20
+All diseases of the circulatory system,25-29,M,33
+All diseases of the circulatory system,30-34,M,72
+All diseases of the circulatory system,35-39,M,120
+All diseases of the circulatory system,40-44,M,218
+All diseases of the circulatory system,45-49,M,383
+All diseases of the circulatory system,50-54,M,584
+All diseases of the circulatory system,55-59,M,781
+All diseases of the circulatory system,60-64,M,1063
+All diseases of the circulatory system,65-69,M,1582
+All diseases of the circulatory system,70-74,M,1800
+All diseases of the circulatory system,75-79,M,2489
+All diseases of the circulatory system,80-84,M,3665
+All diseases of the circulatory system,85+,M,8265
+All diseases of the circulatory system,0-4,F,15
+All diseases of the circulatory system,5-9,F,1
+All diseases of the circulatory system,10-14,F,0
+All diseases of the circulatory system,15-19,F,8
+All diseases of the circulatory system,20-24,F,11
+All diseases of the circulatory system,25-29,F,16
+All diseases of the circulatory system,30-34,F,29
+All diseases of the circulatory system,35-39,F,57
+All diseases of the circulatory system,40-44,F,84
+All diseases of the circulatory system,45-49,F,146
+All diseases of the circulatory system,50-54,F,204
+All diseases of the circulatory system,55-59,F,282
+All diseases of the circulatory system,60-64,F,426
+All diseases of the circulatory system,65-69,F,622
+All diseases of the circulatory system,70-74,F,902
+All diseases of the circulatory system,75-79,F,1732
+All diseases of the circulatory system,80-84,F,3487
+All diseases of the circulatory system,85+,F,14471
+Cerebrovascular disease,0-4,M,3
+Cerebrovascular disease,5-9,M,1
+Cerebrovascular disease,10-14,M,0
+Cerebrovascular disease,15-19,M,1
+Cerebrovascular disease,20-24,M,2
+Cerebrovascular disease,25-29,M,0
+Cerebrovascular disease,30-34,M,9
+Cerebrovascular disease,35-39,M,11
+Cerebrovascular disease,40-44,M,34
+Cerebrovascular disease,45-49,M,40
+Cerebrovascular disease,50-54,M,62
+Cerebrovascular disease,55-59,M,87
+Cerebrovascular disease,60-64,M,131
+Cerebrovascular disease,65-69,M,240
+Cerebrovascular disease,70-74,M,330
+Cerebrovascular disease,75-79,M,522
+Cerebrovascular disease,80-84,M,843
+Cerebrovascular disease,85+,M,1863
+Cerebrovascular disease,0-4,F,2
+Cerebrovascular disease,5-9,F,1
+Cerebrovascular disease,10-14,F,0
+Cerebrovascular disease,15-19,F,2
+Cerebrovascular disease,20-24,F,0
+Cerebrovascular disease,25-29,F,3
+Cerebrovascular disease,30-34,F,8
+Cerebrovascular disease,35-39,F,10
+Cerebrovascular disease,40-44,F,24
+Cerebrovascular disease,45-49,F,49
+Cerebrovascular disease,50-54,F,65
+Cerebrovascular disease,55-59,F,66
+Cerebrovascular disease,60-64,F,100
+Cerebrovascular disease,65-69,F,152
+Cerebrovascular disease,70-74,F,247
+Cerebrovascular disease,75-79,F,510
+Cerebrovascular disease,80-84,F,1078
+Cerebrovascular disease,85+,F,4051
+Heart failure,0-4,M,0
+Heart failure,5-9,M,0
+Heart failure,10-14,M,0
+Heart failure,15-19,M,0
+Heart failure,20-24,M,0
+Heart failure,25-29,M,0
+Heart failure,30-34,M,1
+Heart failure,35-39,M,1
+Heart failure,40-44,M,4
+Heart failure,45-49,M,5
+Heart failure,50-54,M,9
+Heart failure,55-59,M,10
+Heart failure,60-64,M,19
+Heart failure,65-69,M,47
+Heart failure,70-74,M,60
+Heart failure,75-79,M,146
+Heart failure,80-84,M,226
+Heart failure,85+,M,632
+Heart failure,0-4,F,0
+Heart failure,5-9,F,0
+Heart failure,10-14,F,0
+Heart failure,15-19,F,0
+Heart failure,20-24,F,0
+Heart failure,25-29,F,0
+Heart failure,30-34,F,1
+Heart failure,35-39,F,0
+Heart failure,40-44,F,0
+Heart failure,45-49,F,0
+Heart failure,50-54,F,4
+Heart failure,55-59,F,8
+Heart failure,60-64,F,12
+Heart failure,65-69,F,19
+Heart failure,70-74,F,39
+Heart failure,75-79,F,87
+Heart failure,80-84,F,230
+Heart failure,85+,F,1185
+Hypertensive disease,0-4,M,0
+Hypertensive disease,5-9,M,0
+Hypertensive disease,10-14,M,0
+Hypertensive disease,15-19,M,0
+Hypertensive disease,20-24,M,1
+Hypertensive disease,25-29,M,3
+Hypertensive disease,30-34,M,2
+Hypertensive disease,35-39,M,0
+Hypertensive disease,40-44,M,5
+Hypertensive disease,45-49,M,7
+Hypertensive disease,50-54,M,21
+Hypertensive disease,55-59,M,20
+Hypertensive disease,60-64,M,31
+Hypertensive disease,65-69,M,53
+Hypertensive disease,70-74,M,58
+Hypertensive disease,75-79,M,92
+Hypertensive disease,80-84,M,135
+Hypertensive disease,85+,M,335
+Hypertensive disease,0-4,F,0
+Hypertensive disease,5-9,F,0
+Hypertensive disease,10-14,F,0
+Hypertensive disease,15-19,F,0
+Hypertensive disease,20-24,F,0
+Hypertensive disease,25-29,F,0
+Hypertensive disease,30-34,F,0
+Hypertensive disease,35-39,F,0
+Hypertensive disease,40-44,F,1
+Hypertensive disease,45-49,F,5
+Hypertensive disease,50-54,F,7
+Hypertensive disease,55-59,F,15
+Hypertensive disease,60-64,F,15
+Hypertensive disease,65-69,F,18
+Hypertensive disease,70-74,F,39
+Hypertensive disease,75-79,F,88
+Hypertensive disease,80-84,F,174
+Hypertensive disease,85+,F,1025
+Coronary heart disease,0-4,M,0
+Coronary heart disease,5-9,M,0
+Coronary heart disease,10-14,M,0
+Coronary heart disease,15-19,M,2
+Coronary heart disease,20-24,M,2
+Coronary heart disease,25-29,M,10
+Coronary heart disease,30-34,M,23
+Coronary heart disease,35-39,M,56
+Coronary heart disease,40-44,M,102
+Coronary heart disease,45-49,M,239
+Coronary heart disease,50-54,M,362
+Coronary heart disease,55-59,M,518
+Coronary heart disease,60-64,M,668
+Coronary heart disease,65-69,M,948
+Coronary heart disease,70-74,M,1001
+Coronary heart disease,75-79,M,1252
+Coronary heart disease,80-84,M,1798
+Coronary heart disease,85+,M,4032
+Coronary heart disease,0-4,F,0
+Coronary heart disease,5-9,F,0
+Coronary heart disease,10-14,F,0
+Coronary heart disease,15-19,F,0
+Coronary heart disease,20-24,F,0
+Coronary heart disease,25-29,F,1
+Coronary heart disease,30-34,F,7
+Coronary heart disease,35-39,F,14
+Coronary heart disease,40-44,F,20
+Coronary heart disease,45-49,F,44
+Coronary heart disease,50-54,F,69
+Coronary heart disease,55-59,F,118
+Coronary heart disease,60-64,F,177
+Coronary heart disease,65-69,F,274
+Coronary heart disease,70-74,F,350
+Coronary heart disease,75-79,F,644
+Coronary heart disease,80-84,F,1282
+Coronary heart disease,85+,F,5750
+Stroke,0-4,M,2
+Stroke,5-9,M,1
+Stroke,10-14,M,0
+Stroke,15-19,M,1
+Stroke,20-24,M,2
+Stroke,25-29,M,0
+Stroke,30-34,M,8
+Stroke,35-39,M,9
+Stroke,40-44,M,31
+Stroke,45-49,M,35
+Stroke,50-54,M,59
+Stroke,55-59,M,73
+Stroke,60-64,M,112
+Stroke,65-69,M,204
+Stroke,70-74,M,251
+Stroke,75-79,M,410
+Stroke,80-84,M,609
+Stroke,85+,M,1351
+Stroke,0-4,F,1
+Stroke,5-9,F,1
+Stroke,10-14,F,0
+Stroke,15-19,F,1
+Stroke,20-24,F,0
+Stroke,25-29,F,2
+Stroke,30-34,F,8
+Stroke,35-39,F,9
+Stroke,40-44,F,20
+Stroke,45-49,F,46
+Stroke,50-54,F,61
+Stroke,55-59,F,59
+Stroke,60-64,F,84
+Stroke,65-69,F,132
+Stroke,70-74,F,213
+Stroke,75-79,F,412
+Stroke,80-84,F,840
+Stroke,85+,F,3052
+All diseases of the respiratory system,0-4,M,25
+All diseases of the respiratory system,5-9,M,4
+All diseases of the respiratory system,10-14,M,3
+All diseases of the respiratory system,15-19,M,6
+All diseases of the respiratory system,20-24,M,3
+All diseases of the respiratory system,25-29,M,12
+All diseases of the respiratory system,30-34,M,15
+All diseases of the respiratory system,35-39,M,22
+All diseases of the respiratory system,40-44,M,31
+All diseases of the respiratory system,45-49,M,43
+All diseases of the respiratory system,50-54,M,70
+All diseases of the respiratory system,55-59,M,145
+All diseases of the respiratory system,60-64,M,247
+All diseases of the respiratory system,65-69,M,507
+All diseases of the respiratory system,70-74,M,703
+All diseases of the respiratory system,75-79,M,982
+All diseases of the respiratory system,80-84,M,1255
+All diseases of the respiratory system,85+,M,2478
+All diseases of the respiratory system,0-4,F,11
+All diseases of the respiratory system,5-9,F,5
+All diseases of the respiratory system,10-14,F,2
+All diseases of the respiratory system,15-19,F,8
+All diseases of the respiratory system,20-24,F,4
+All diseases of the respiratory system,25-29,F,10
+All diseases of the respiratory system,30-34,F,12
+All diseases of the respiratory system,35-39,F,14
+All diseases of the respiratory system,40-44,F,17
+All diseases of the respiratory system,45-49,F,34
+All diseases of the respiratory system,50-54,F,72
+All diseases of the respiratory system,55-59,F,117
+All diseases of the respiratory system,60-64,F,189
+All diseases of the respiratory system,65-69,F,325
+All diseases of the respiratory system,70-74,F,456
+All diseases of the respiratory system,75-79,F,707
+All diseases of the respiratory system,80-84,F,1058
+All diseases of the respiratory system,85+,F,2872
+Asthma,0-4,M,1
+Asthma,5-9,M,1
+Asthma,10-14,M,2
+Asthma,15-19,M,4
+Asthma,20-24,M,2
+Asthma,25-29,M,5
+Asthma,30-34,M,7
+Asthma,35-39,M,7
+Asthma,40-44,M,6
+Asthma,45-49,M,7
+Asthma,50-54,M,4
+Asthma,55-59,M,7
+Asthma,60-64,M,8
+Asthma,65-69,M,11
+Asthma,70-74,M,8
+Asthma,75-79,M,9
+Asthma,80-84,M,24
+Asthma,85+,M,28
+Asthma,0-4,F,0
+Asthma,5-9,F,0
+Asthma,10-14,F,0
+Asthma,15-19,F,4
+Asthma,20-24,F,2
+Asthma,25-29,F,2
+Asthma,30-34,F,7
+Asthma,35-39,F,0
+Asthma,40-44,F,4
+Asthma,45-49,F,7
+Asthma,50-54,F,14
+Asthma,55-59,F,8
+Asthma,60-64,F,10
+Asthma,65-69,F,17
+Asthma,70-74,F,12
+Asthma,75-79,F,24
+Asthma,80-84,F,34
+Asthma,85+,F,103
+Chronic obstructive pulmonary disease,0-4,M,1
+Chronic obstructive pulmonary disease,5-9,M,0
+Chronic obstructive pulmonary disease,10-14,M,0
+Chronic obstructive pulmonary disease,15-19,M,0
+Chronic obstructive pulmonary disease,20-24,M,0
+Chronic obstructive pulmonary disease,25-29,M,0
+Chronic obstructive pulmonary disease,30-34,M,0
+Chronic obstructive pulmonary disease,35-39,M,2
+Chronic obstructive pulmonary disease,40-44,M,9
+Chronic obstructive pulmonary disease,45-49,M,13
+Chronic obstructive pulmonary disease,50-54,M,30
+Chronic obstructive pulmonary disease,55-59,M,81
+Chronic obstructive pulmonary disease,60-64,M,164
+Chronic obstructive pulmonary disease,65-69,M,313
+Chronic obstructive pulmonary disease,70-74,M,465
+Chronic obstructive pulmonary disease,75-79,M,597
+Chronic obstructive pulmonary disease,80-84,M,714
+Chronic obstructive pulmonary disease,85+,M,1183
+Chronic obstructive pulmonary disease,0-4,F,1
+Chronic obstructive pulmonary disease,5-9,F,0
+Chronic obstructive pulmonary disease,10-14,F,0
+Chronic obstructive pulmonary disease,15-19,F,1
+Chronic obstructive pulmonary disease,20-24,F,0
+Chronic obstructive pulmonary disease,25-29,F,1
+Chronic obstructive pulmonary disease,30-34,F,0
+Chronic obstructive pulmonary disease,35-39,F,1
+Chronic obstructive pulmonary disease,40-44,F,1
+Chronic obstructive pulmonary disease,45-49,F,12
+Chronic obstructive pulmonary disease,50-54,F,32
+Chronic obstructive pulmonary disease,55-59,F,72
+Chronic obstructive pulmonary disease,60-64,F,117
+Chronic obstructive pulmonary disease,65-69,F,226
+Chronic obstructive pulmonary disease,70-74,F,323
+Chronic obstructive pulmonary disease,75-79,F,435
+Chronic obstructive pulmonary disease,80-84,F,595
+Chronic obstructive pulmonary disease,85+,F,1072
+Influenza and pneumonia,0-4,M,12
+Influenza and pneumonia,5-9,M,1
+Influenza and pneumonia,10-14,M,0
+Influenza and pneumonia,15-19,M,0
+Influenza and pneumonia,20-24,M,0
+Influenza and pneumonia,25-29,M,3
+Influenza and pneumonia,30-34,M,7
+Influenza and pneumonia,35-39,M,7
+Influenza and pneumonia,40-44,M,10
+Influenza and pneumonia,45-49,M,17
+Influenza and pneumonia,50-54,M,17
+Influenza and pneumonia,55-59,M,28
+Influenza and pneumonia,60-64,M,27
+Influenza and pneumonia,65-69,M,41
+Influenza and pneumonia,70-74,M,50
+Influenza and pneumonia,75-79,M,107
+Influenza and pneumonia,80-84,M,180
+Influenza and pneumonia,85+,M,622
+Influenza and pneumonia,0-4,F,3
+Influenza and pneumonia,5-9,F,3
+Influenza and pneumonia,10-14,F,1
+Influenza and pneumonia,15-19,F,1
+Influenza and pneumonia,20-24,F,2
+Influenza and pneumonia,25-29,F,5
+Influenza and pneumonia,30-34,F,2
+Influenza and pneumonia,35-39,F,7
+Influenza and pneumonia,40-44,F,8
+Influenza and pneumonia,45-49,F,10
+Influenza and pneumonia,50-54,F,9
+Influenza and pneumonia,55-59,F,17
+Influenza and pneumonia,60-64,F,23
+Influenza and pneumonia,65-69,F,26
+Influenza and pneumonia,70-74,F,37
+Influenza and pneumonia,75-79,F,86
+Influenza and pneumonia,80-84,F,170
+Influenza and pneumonia,85+,F,954
+All diseases of the digestive system,0-4,M,5
+All diseases of the digestive system,5-9,M,2
+All diseases of the digestive system,10-14,M,0
+All diseases of the digestive system,15-19,M,1
+All diseases of the digestive system,20-24,M,3
+All diseases of the digestive system,25-29,M,4
+All diseases of the digestive system,30-34,M,17
+All diseases of the digestive system,35-39,M,34
+All diseases of the digestive system,40-44,M,77
+All diseases of the digestive system,45-49,M,128
+All diseases of the digestive system,50-54,M,185
+All diseases of the digestive system,55-59,M,221
+All diseases of the digestive system,60-64,M,232
+All diseases of the digestive system,65-69,M,247
+All diseases of the digestive system,70-74,M,254
+All diseases of the digestive system,75-79,M,271
+All diseases of the digestive system,80-84,M,395
+All diseases of the digestive system,85+,M,695
+All diseases of the digestive system,0-4,F,4
+All diseases of the digestive system,5-9,F,1
+All diseases of the digestive system,10-14,F,0
+All diseases of the digestive system,15-19,F,2
+All diseases of the digestive system,20-24,F,1
+All diseases of the digestive system,25-29,F,2
+All diseases of the digestive system,30-34,F,11
+All diseases of the digestive system,35-39,F,22
+All diseases of the digestive system,40-44,F,47
+All diseases of the digestive system,45-49,F,57
+All diseases of the digestive system,50-54,F,62
+All diseases of the digestive system,55-59,F,93
+All diseases of the digestive system,60-64,F,111
+All diseases of the digestive system,65-69,F,145
+All diseases of the digestive system,70-74,F,177
+All diseases of the digestive system,75-79,F,226
+All diseases of the digestive system,80-84,F,406
+All diseases of the digestive system,85+,F,1285
+Liver disease,0-4,M,3
+Liver disease,5-9,M,1
+Liver disease,10-14,M,0
+Liver disease,15-19,M,0
+Liver disease,20-24,M,1
+Liver disease,25-29,M,1
+Liver disease,30-34,M,9
+Liver disease,35-39,M,32
+Liver disease,40-44,M,64
+Liver disease,45-49,M,104
+Liver disease,50-54,M,142
+Liver disease,55-59,M,163
+Liver disease,60-64,M,165
+Liver disease,65-69,M,157
+Liver disease,70-74,M,122
+Liver disease,75-79,M,78
+Liver disease,80-84,M,69
+Liver disease,85+,M,71
+Liver disease,0-4,F,2
+Liver disease,5-9,F,0
+Liver disease,10-14,F,0
+Liver disease,15-19,F,0
+Liver disease,20-24,F,0
+Liver disease,25-29,F,0
+Liver disease,30-34,F,7
+Liver disease,35-39,F,20
+Liver disease,40-44,F,39
+Liver disease,45-49,F,48
+Liver disease,50-54,F,43
+Liver disease,55-59,F,66
+Liver disease,60-64,F,71
+Liver disease,65-69,F,74
+Liver disease,70-74,F,56
+Liver disease,75-79,F,52
+Liver disease,80-84,F,45
+Liver disease,85+,F,67
+All diseases of the skin and subcutaneous tissue,0-4,M,0
+All diseases of the skin and subcutaneous tissue,5-9,M,0
+All diseases of the skin and subcutaneous tissue,10-14,M,0
+All diseases of the skin and subcutaneous tissue,15-19,M,0
+All diseases of the skin and subcutaneous tissue,20-24,M,0
+All diseases of the skin and subcutaneous tissue,25-29,M,0
+All diseases of the skin and subcutaneous tissue,30-34,M,0
+All diseases of the skin and subcutaneous tissue,35-39,M,1
+All diseases of the skin and subcutaneous tissue,40-44,M,2
+All diseases of the skin and subcutaneous tissue,45-49,M,3
+All diseases of the skin and subcutaneous tissue,50-54,M,4
+All diseases of the skin and subcutaneous tissue,55-59,M,3
+All diseases of the skin and subcutaneous tissue,60-64,M,9
+All diseases of the skin and subcutaneous tissue,65-69,M,12
+All diseases of the skin and subcutaneous tissue,70-74,M,10
+All diseases of the skin and subcutaneous tissue,75-79,M,22
+All diseases of the skin and subcutaneous tissue,80-84,M,38
+All diseases of the skin and subcutaneous tissue,85+,M,84
+All diseases of the skin and subcutaneous tissue,0-4,F,0
+All diseases of the skin and subcutaneous tissue,5-9,F,0
+All diseases of the skin and subcutaneous tissue,10-14,F,0
+All diseases of the skin and subcutaneous tissue,15-19,F,0
+All diseases of the skin and subcutaneous tissue,20-24,F,0
+All diseases of the skin and subcutaneous tissue,25-29,F,0
+All diseases of the skin and subcutaneous tissue,30-34,F,0
+All diseases of the skin and subcutaneous tissue,35-39,F,1
+All diseases of the skin and subcutaneous tissue,40-44,F,2
+All diseases of the skin and subcutaneous tissue,45-49,F,3
+All diseases of the skin and subcutaneous tissue,50-54,F,5
+All diseases of the skin and subcutaneous tissue,55-59,F,4
+All diseases of the skin and subcutaneous tissue,60-64,F,7
+All diseases of the skin and subcutaneous tissue,65-69,F,15
+All diseases of the skin and subcutaneous tissue,70-74,F,12
+All diseases of the skin and subcutaneous tissue,75-79,F,19
+All diseases of the skin and subcutaneous tissue,80-84,F,31
+All diseases of the skin and subcutaneous tissue,85+,F,147
+All diseases of the musculoskeletal system and connective tissue,0-4,M,1
+All diseases of the musculoskeletal system and connective tissue,5-9,M,1
+All diseases of the musculoskeletal system and connective tissue,10-14,M,2
+All diseases of the musculoskeletal system and connective tissue,15-19,M,0
+All diseases of the musculoskeletal system and connective tissue,20-24,M,0
+All diseases of the musculoskeletal system and connective tissue,25-29,M,1
+All diseases of the musculoskeletal system and connective tissue,30-34,M,0
+All diseases of the musculoskeletal system and connective tissue,35-39,M,0
+All diseases of the musculoskeletal system and connective tissue,40-44,M,5
+All diseases of the musculoskeletal system and connective tissue,45-49,M,5
+All diseases of the musculoskeletal system and connective tissue,50-54,M,10
+All diseases of the musculoskeletal system and connective tissue,55-59,M,15
+All diseases of the musculoskeletal system and connective tissue,60-64,M,23
+All diseases of the musculoskeletal system and connective tissue,65-69,M,22
+All diseases of the musculoskeletal system and connective tissue,70-74,M,30
+All diseases of the musculoskeletal system and connective tissue,75-79,M,48
+All diseases of the musculoskeletal system and connective tissue,80-84,M,73
+All diseases of the musculoskeletal system and connective tissue,85+,M,139
+All diseases of the musculoskeletal system and connective tissue,0-4,F,0
+All diseases of the musculoskeletal system and connective tissue,5-9,F,0
+All diseases of the musculoskeletal system and connective tissue,10-14,F,0
+All diseases of the musculoskeletal system and connective tissue,15-19,F,2
+All diseases of the musculoskeletal system and connective tissue,20-24,F,0
+All diseases of the musculoskeletal system and connective tissue,25-29,F,0
+All diseases of the musculoskeletal system and connective tissue,30-34,F,2
+All diseases of the musculoskeletal system and connective tissue,35-39,F,3
+All diseases of the musculoskeletal system and connective tissue,40-44,F,4
+All diseases of the musculoskeletal system and connective tissue,45-49,F,11
+All diseases of the musculoskeletal system and connective tissue,50-54,F,14
+All diseases of the musculoskeletal system and connective tissue,55-59,F,21
+All diseases of the musculoskeletal system and connective tissue,60-64,F,23
+All diseases of the musculoskeletal system and connective tissue,65-69,F,38
+All diseases of the musculoskeletal system and connective tissue,70-74,F,60
+All diseases of the musculoskeletal system and connective tissue,75-79,F,72
+All diseases of the musculoskeletal system and connective tissue,80-84,F,111
+All diseases of the musculoskeletal system and connective tissue,85+,F,445
+Osteoarthritis,0-4,M,0
+Osteoarthritis,5-9,M,0
+Osteoarthritis,10-14,M,0
+Osteoarthritis,15-19,M,0
+Osteoarthritis,20-24,M,0
+Osteoarthritis,25-29,M,0
+Osteoarthritis,30-34,M,0
+Osteoarthritis,35-39,M,0
+Osteoarthritis,40-44,M,0
+Osteoarthritis,45-49,M,0
+Osteoarthritis,50-54,M,0
+Osteoarthritis,55-59,M,0
+Osteoarthritis,60-64,M,0
+Osteoarthritis,65-69,M,1
+Osteoarthritis,70-74,M,1
+Osteoarthritis,75-79,M,1
+Osteoarthritis,80-84,M,1
+Osteoarthritis,85+,M,20
+Osteoarthritis,0-4,F,0
+Osteoarthritis,5-9,F,0
+Osteoarthritis,10-14,F,0
+Osteoarthritis,15-19,F,0
+Osteoarthritis,20-24,F,0
+Osteoarthritis,25-29,F,0
+Osteoarthritis,30-34,F,0
+Osteoarthritis,35-39,F,0
+Osteoarthritis,40-44,F,0
+Osteoarthritis,45-49,F,0
+Osteoarthritis,50-54,F,0
+Osteoarthritis,55-59,F,0
+Osteoarthritis,60-64,F,0
+Osteoarthritis,65-69,F,0
+Osteoarthritis,70-74,F,3
+Osteoarthritis,75-79,F,2
+Osteoarthritis,80-84,F,13
+Osteoarthritis,85+,F,96
+Osteoporosis,0-4,M,0
+Osteoporosis,5-9,M,0
+Osteoporosis,10-14,M,0
+Osteoporosis,15-19,M,0
+Osteoporosis,20-24,M,0
+Osteoporosis,25-29,M,0
+Osteoporosis,30-34,M,0
+Osteoporosis,35-39,M,0
+Osteoporosis,40-44,M,0
+Osteoporosis,45-49,M,0
+Osteoporosis,50-54,M,1
+Osteoporosis,55-59,M,0
+Osteoporosis,60-64,M,0
+Osteoporosis,65-69,M,0
+Osteoporosis,70-74,M,1
+Osteoporosis,75-79,M,1
+Osteoporosis,80-84,M,3
+Osteoporosis,85+,M,17
+Osteoporosis,0-4,F,0
+Osteoporosis,5-9,F,0
+Osteoporosis,10-14,F,0
+Osteoporosis,15-19,F,0
+Osteoporosis,20-24,F,0
+Osteoporosis,25-29,F,0
+Osteoporosis,30-34,F,0
+Osteoporosis,35-39,F,0
+Osteoporosis,40-44,F,0
+Osteoporosis,45-49,F,0
+Osteoporosis,50-54,F,0
+Osteoporosis,55-59,F,0
+Osteoporosis,60-64,F,0
+Osteoporosis,65-69,F,0
+Osteoporosis,70-74,F,2
+Osteoporosis,75-79,F,4
+Osteoporosis,80-84,F,17
+Osteoporosis,85+,F,121
+Rheumatoid arthritis,0-4,M,0
+Rheumatoid arthritis,5-9,M,0
+Rheumatoid arthritis,10-14,M,1
+Rheumatoid arthritis,15-19,M,0
+Rheumatoid arthritis,20-24,M,0
+Rheumatoid arthritis,25-29,M,0
+Rheumatoid arthritis,30-34,M,0
+Rheumatoid arthritis,35-39,M,0
+Rheumatoid arthritis,40-44,M,0
+Rheumatoid arthritis,45-49,M,1
+Rheumatoid arthritis,50-54,M,1
+Rheumatoid arthritis,55-59,M,0
+Rheumatoid arthritis,60-64,M,5
+Rheumatoid arthritis,65-69,M,6
+Rheumatoid arthritis,70-74,M,5
+Rheumatoid arthritis,75-79,M,7
+Rheumatoid arthritis,80-84,M,11
+Rheumatoid arthritis,85+,M,11
+Rheumatoid arthritis,0-4,F,0
+Rheumatoid arthritis,5-9,F,0
+Rheumatoid arthritis,10-14,F,0
+Rheumatoid arthritis,15-19,F,0
+Rheumatoid arthritis,20-24,F,0
+Rheumatoid arthritis,25-29,F,0
+Rheumatoid arthritis,30-34,F,0
+Rheumatoid arthritis,35-39,F,0
+Rheumatoid arthritis,40-44,F,0
+Rheumatoid arthritis,45-49,F,0
+Rheumatoid arthritis,50-54,F,0
+Rheumatoid arthritis,55-59,F,4
+Rheumatoid arthritis,60-64,F,4
+Rheumatoid arthritis,65-69,F,12
+Rheumatoid arthritis,70-74,F,17
+Rheumatoid arthritis,75-79,F,18
+Rheumatoid arthritis,80-84,F,33
+Rheumatoid arthritis,85+,F,58
+All diseases of the genitourinary system,0-4,M,0
+All diseases of the genitourinary system,5-9,M,0
+All diseases of the genitourinary system,10-14,M,0
+All diseases of the genitourinary system,15-19,M,0
+All diseases of the genitourinary system,20-24,M,2
+All diseases of the genitourinary system,25-29,M,4
+All diseases of the genitourinary system,30-34,M,2
+All diseases of the genitourinary system,35-39,M,1
+All diseases of the genitourinary system,40-44,M,6
+All diseases of the genitourinary system,45-49,M,16
+All diseases of the genitourinary system,50-54,M,13
+All diseases of the genitourinary system,55-59,M,27
+All diseases of the genitourinary system,60-64,M,38
+All diseases of the genitourinary system,65-69,M,56
+All diseases of the genitourinary system,70-74,M,100
+All diseases of the genitourinary system,75-79,M,151
+All diseases of the genitourinary system,80-84,M,287
+All diseases of the genitourinary system,85+,M,701
+All diseases of the genitourinary system,0-4,F,1
+All diseases of the genitourinary system,5-9,F,0
+All diseases of the genitourinary system,10-14,F,1
+All diseases of the genitourinary system,15-19,F,0
+All diseases of the genitourinary system,20-24,F,3
+All diseases of the genitourinary system,25-29,F,3
+All diseases of the genitourinary system,30-34,F,3
+All diseases of the genitourinary system,35-39,F,5
+All diseases of the genitourinary system,40-44,F,6
+All diseases of the genitourinary system,45-49,F,14
+All diseases of the genitourinary system,50-54,F,14
+All diseases of the genitourinary system,55-59,F,25
+All diseases of the genitourinary system,60-64,F,34
+All diseases of the genitourinary system,65-69,F,56
+All diseases of the genitourinary system,70-74,F,90
+All diseases of the genitourinary system,75-79,F,138
+All diseases of the genitourinary system,80-84,F,276
+All diseases of the genitourinary system,85+,F,1037
+Kidney failure,0-4,M,0
+Kidney failure,5-9,M,0
+Kidney failure,10-14,M,0
+Kidney failure,15-19,M,0
+Kidney failure,20-24,M,1
+Kidney failure,25-29,M,3
+Kidney failure,30-34,M,2
+Kidney failure,35-39,M,0
+Kidney failure,40-44,M,4
+Kidney failure,45-49,M,10
+Kidney failure,50-54,M,9
+Kidney failure,55-59,M,17
+Kidney failure,60-64,M,24
+Kidney failure,65-69,M,38
+Kidney failure,70-74,M,71
+Kidney failure,75-79,M,88
+Kidney failure,80-84,M,194
+Kidney failure,85+,M,480
+Kidney failure,0-4,F,0
+Kidney failure,5-9,F,0
+Kidney failure,10-14,F,0
+Kidney failure,15-19,F,0
+Kidney failure,20-24,F,0
+Kidney failure,25-29,F,0
+Kidney failure,30-34,F,2
+Kidney failure,35-39,F,2
+Kidney failure,40-44,F,3
+Kidney failure,45-49,F,8
+Kidney failure,50-54,F,7
+Kidney failure,55-59,F,13
+Kidney failure,60-64,F,18
+Kidney failure,65-69,F,28
+Kidney failure,70-74,F,60
+Kidney failure,75-79,F,76
+Kidney failure,80-84,F,183
+Kidney failure,85+,F,660
+"All pregnancy, childbirth and the puerperium",0-4,M,0
+"All pregnancy, childbirth and the puerperium",5-9,M,0
+"All pregnancy, childbirth and the puerperium",10-14,M,0
+"All pregnancy, childbirth and the puerperium",15-19,M,0
+"All pregnancy, childbirth and the puerperium",20-24,M,0
+"All pregnancy, childbirth and the puerperium",25-29,M,0
+"All pregnancy, childbirth and the puerperium",30-34,M,0
+"All pregnancy, childbirth and the puerperium",35-39,M,0
+"All pregnancy, childbirth and the puerperium",40-44,M,0
+"All pregnancy, childbirth and the puerperium",45-49,M,0
+"All pregnancy, childbirth and the puerperium",50-54,M,0
+"All pregnancy, childbirth and the puerperium",55-59,M,0
+"All pregnancy, childbirth and the puerperium",60-64,M,0
+"All pregnancy, childbirth and the puerperium",65-69,M,0
+"All pregnancy, childbirth and the puerperium",70-74,M,0
+"All pregnancy, childbirth and the puerperium",75-79,M,0
+"All pregnancy, childbirth and the puerperium",80-84,M,0
+"All pregnancy, childbirth and the puerperium",85+,M,0
+"All pregnancy, childbirth and the puerperium",0-4,F,0
+"All pregnancy, childbirth and the puerperium",5-9,F,0
+"All pregnancy, childbirth and the puerperium",10-14,F,0
+"All pregnancy, childbirth and the puerperium",15-19,F,0
+"All pregnancy, childbirth and the puerperium",20-24,F,0
+"All pregnancy, childbirth and the puerperium",25-29,F,3
+"All pregnancy, childbirth and the puerperium",30-34,F,1
+"All pregnancy, childbirth and the puerperium",35-39,F,2
+"All pregnancy, childbirth and the puerperium",40-44,F,0
+"All pregnancy, childbirth and the puerperium",45-49,F,0
+"All pregnancy, childbirth and the puerperium",50-54,F,0
+"All pregnancy, childbirth and the puerperium",55-59,F,0
+"All pregnancy, childbirth and the puerperium",60-64,F,0
+"All pregnancy, childbirth and the puerperium",65-69,F,0
+"All pregnancy, childbirth and the puerperium",70-74,F,0
+"All pregnancy, childbirth and the puerperium",75-79,F,0
+"All pregnancy, childbirth and the puerperium",80-84,F,0
+"All pregnancy, childbirth and the puerperium",85+,F,0
+All certain conditions originating in the perinatal period,0-4,M,295
+All certain conditions originating in the perinatal period,5-9,M,0
+All certain conditions originating in the perinatal period,10-14,M,1
+All certain conditions originating in the perinatal period,15-19,M,0
+All certain conditions originating in the perinatal period,20-24,M,0
+All certain conditions originating in the perinatal period,25-29,M,0
+All certain conditions originating in the perinatal period,30-34,M,0
+All certain conditions originating in the perinatal period,35-39,M,0
+All certain conditions originating in the perinatal period,40-44,M,0
+All certain conditions originating in the perinatal period,45-49,M,0
+All certain conditions originating in the perinatal period,50-54,M,0
+All certain conditions originating in the perinatal period,55-59,M,0
+All certain conditions originating in the perinatal period,60-64,M,0
+All certain conditions originating in the perinatal period,65-69,M,0
+All certain conditions originating in the perinatal period,70-74,M,0
+All certain conditions originating in the perinatal period,75-79,M,0
+All certain conditions originating in the perinatal period,80-84,M,0
+All certain conditions originating in the perinatal period,85+,M,0
+All certain conditions originating in the perinatal period,0-4,F,263
+All certain conditions originating in the perinatal period,5-9,F,1
+All certain conditions originating in the perinatal period,10-14,F,1
+All certain conditions originating in the perinatal period,15-19,F,0
+All certain conditions originating in the perinatal period,20-24,F,0
+All certain conditions originating in the perinatal period,25-29,F,0
+All certain conditions originating in the perinatal period,30-34,F,1
+All certain conditions originating in the perinatal period,35-39,F,0
+All certain conditions originating in the perinatal period,40-44,F,0
+All certain conditions originating in the perinatal period,45-49,F,0
+All certain conditions originating in the perinatal period,50-54,F,0
+All certain conditions originating in the perinatal period,55-59,F,0
+All certain conditions originating in the perinatal period,60-64,F,0
+All certain conditions originating in the perinatal period,65-69,F,0
+All certain conditions originating in the perinatal period,70-74,F,0
+All certain conditions originating in the perinatal period,75-79,F,0
+All certain conditions originating in the perinatal period,80-84,F,0
+All certain conditions originating in the perinatal period,85+,F,0
+"All congenital malformations, deformations and chromosomal abnormalities",0-4,M,154
+"All congenital malformations, deformations and chromosomal abnormalities",5-9,M,2
+"All congenital malformations, deformations and chromosomal abnormalities",10-14,M,6
+"All congenital malformations, deformations and chromosomal abnormalities",15-19,M,3
+"All congenital malformations, deformations and chromosomal abnormalities",20-24,M,7
+"All congenital malformations, deformations and chromosomal abnormalities",25-29,M,3
+"All congenital malformations, deformations and chromosomal abnormalities",30-34,M,8
+"All congenital malformations, deformations and chromosomal abnormalities",35-39,M,7
+"All congenital malformations, deformations and chromosomal abnormalities",40-44,M,5
+"All congenital malformations, deformations and chromosomal abnormalities",45-49,M,13
+"All congenital malformations, deformations and chromosomal abnormalities",50-54,M,21
+"All congenital malformations, deformations and chromosomal abnormalities",55-59,M,24
+"All congenital malformations, deformations and chromosomal abnormalities",60-64,M,22
+"All congenital malformations, deformations and chromosomal abnormalities",65-69,M,13
+"All congenital malformations, deformations and chromosomal abnormalities",70-74,M,9
+"All congenital malformations, deformations and chromosomal abnormalities",75-79,M,4
+"All congenital malformations, deformations and chromosomal abnormalities",80-84,M,5
+"All congenital malformations, deformations and chromosomal abnormalities",85+,M,14
+"All congenital malformations, deformations and chromosomal abnormalities",0-4,F,140
+"All congenital malformations, deformations and chromosomal abnormalities",5-9,F,6
+"All congenital malformations, deformations and chromosomal abnormalities",10-14,F,4
+"All congenital malformations, deformations and chromosomal abnormalities",15-19,F,6
+"All congenital malformations, deformations and chromosomal abnormalities",20-24,F,4
+"All congenital malformations, deformations and chromosomal abnormalities",25-29,F,3
+"All congenital malformations, deformations and chromosomal abnormalities",30-34,F,5
+"All congenital malformations, deformations and chromosomal abnormalities",35-39,F,4
+"All congenital malformations, deformations and chromosomal abnormalities",40-44,F,2
+"All congenital malformations, deformations and chromosomal abnormalities",45-49,F,12
+"All congenital malformations, deformations and chromosomal abnormalities",50-54,F,19
+"All congenital malformations, deformations and chromosomal abnormalities",55-59,F,20
+"All congenital malformations, deformations and chromosomal abnormalities",60-64,F,16
+"All congenital malformations, deformations and chromosomal abnormalities",65-69,F,15
+"All congenital malformations, deformations and chromosomal abnormalities",70-74,F,5
+"All congenital malformations, deformations and chromosomal abnormalities",75-79,F,8
+"All congenital malformations, deformations and chromosomal abnormalities",80-84,F,15
+"All congenital malformations, deformations and chromosomal abnormalities",85+,F,16
+All external causes of morbidity and mortality,0-4,M,53
+All external causes of morbidity and mortality,5-9,M,24
+All external causes of morbidity and mortality,10-14,M,38
+All external causes of morbidity and mortality,15-19,M,238
+All external causes of morbidity and mortality,20-24,M,363
+All external causes of morbidity and mortality,25-29,M,390
+All external causes of morbidity and mortality,30-34,M,407
+All external causes of morbidity and mortality,35-39,M,437
+All external causes of morbidity and mortality,40-44,M,484
+All external causes of morbidity and mortality,45-49,M,435
+All external causes of morbidity and mortality,50-54,M,412
+All external causes of morbidity and mortality,55-59,M,351
+All external causes of morbidity and mortality,60-64,M,284
+All external causes of morbidity and mortality,65-69,M,277
+All external causes of morbidity and mortality,70-74,M,253
+All external causes of morbidity and mortality,75-79,M,256
+All external causes of morbidity and mortality,80-84,M,340
+All external causes of morbidity and mortality,85+,M,802
+All external causes of morbidity and mortality,0-4,F,46
+All external causes of morbidity and mortality,5-9,F,18
+All external causes of morbidity and mortality,10-14,F,16
+All external causes of morbidity and mortality,15-19,F,82
+All external causes of morbidity and mortality,20-24,F,126
+All external causes of morbidity and mortality,25-29,F,117
+All external causes of morbidity and mortality,30-34,F,127
+All external causes of morbidity and mortality,35-39,F,132
+All external causes of morbidity and mortality,40-44,F,176
+All external causes of morbidity and mortality,45-49,F,157
+All external causes of morbidity and mortality,50-54,F,161
+All external causes of morbidity and mortality,55-59,F,124
+All external causes of morbidity and mortality,60-64,F,140
+All external causes of morbidity and mortality,65-69,F,102
+All external causes of morbidity and mortality,70-74,F,116
+All external causes of morbidity and mortality,75-79,F,186
+All external causes of morbidity and mortality,80-84,F,313
+All external causes of morbidity and mortality,85+,F,1148
+Accidental drowning,0-4,M,14
+Accidental drowning,5-9,M,3
+Accidental drowning,10-14,M,3
+Accidental drowning,15-19,M,11
+Accidental drowning,20-24,M,12
+Accidental drowning,25-29,M,9
+Accidental drowning,30-34,M,17
+Accidental drowning,35-39,M,14
+Accidental drowning,40-44,M,11
+Accidental drowning,45-49,M,11
+Accidental drowning,50-54,M,9
+Accidental drowning,55-59,M,7
+Accidental drowning,60-64,M,11
+Accidental drowning,65-69,M,8
+Accidental drowning,70-74,M,9
+Accidental drowning,75-79,M,5
+Accidental drowning,80-84,M,4
+Accidental drowning,85+,M,1
+Accidental drowning,0-4,F,13
+Accidental drowning,5-9,F,1
+Accidental drowning,10-14,F,1
+Accidental drowning,15-19,F,0
+Accidental drowning,20-24,F,1
+Accidental drowning,25-29,F,3
+Accidental drowning,30-34,F,0
+Accidental drowning,35-39,F,2
+Accidental drowning,40-44,F,5
+Accidental drowning,45-49,F,6
+Accidental drowning,50-54,F,0
+Accidental drowning,55-59,F,4
+Accidental drowning,60-64,F,6
+Accidental drowning,65-69,F,1
+Accidental drowning,70-74,F,0
+Accidental drowning,75-79,F,1
+Accidental drowning,80-84,F,3
+Accidental drowning,85+,F,3
+Assault,0-4,M,5
+Assault,5-9,M,0
+Assault,10-14,M,1
+Assault,15-19,M,6
+Assault,20-24,M,14
+Assault,25-29,M,20
+Assault,30-34,M,26
+Assault,35-39,M,15
+Assault,40-44,M,17
+Assault,45-49,M,15
+Assault,50-54,M,1
+Assault,55-59,M,7
+Assault,60-64,M,1
+Assault,65-69,M,4
+Assault,70-74,M,1
+Assault,75-79,M,1
+Assault,80-84,M,2
+Assault,85+,M,0
+Assault,0-4,F,2
+Assault,5-9,F,0
+Assault,10-14,F,0
+Assault,15-19,F,3
+Assault,20-24,F,13
+Assault,25-29,F,11
+Assault,30-34,F,9
+Assault,35-39,F,3
+Assault,40-44,F,11
+Assault,45-49,F,7
+Assault,50-54,F,5
+Assault,55-59,F,3
+Assault,60-64,F,6
+Assault,65-69,F,3
+Assault,70-74,F,0
+Assault,75-79,F,0
+Assault,80-84,F,1
+Assault,85+,F,2
+Land transport accidents,0-4,M,11
+Land transport accidents,5-9,M,16
+Land transport accidents,10-14,M,13
+Land transport accidents,15-19,M,71
+Land transport accidents,20-24,M,110
+Land transport accidents,25-29,M,85
+Land transport accidents,30-34,M,70
+Land transport accidents,35-39,M,64
+Land transport accidents,40-44,M,76
+Land transport accidents,45-49,M,66
+Land transport accidents,50-54,M,59
+Land transport accidents,55-59,M,64
+Land transport accidents,60-64,M,48
+Land transport accidents,65-69,M,48
+Land transport accidents,70-74,M,51
+Land transport accidents,75-79,M,33
+Land transport accidents,80-84,M,38
+Land transport accidents,85+,M,33
+Land transport accidents,0-4,F,6
+Land transport accidents,5-9,F,12
+Land transport accidents,10-14,F,6
+Land transport accidents,15-19,F,29
+Land transport accidents,20-24,F,38
+Land transport accidents,25-29,F,27
+Land transport accidents,30-34,F,21
+Land transport accidents,35-39,F,17
+Land transport accidents,40-44,F,18
+Land transport accidents,45-49,F,18
+Land transport accidents,50-54,F,20
+Land transport accidents,55-59,F,14
+Land transport accidents,60-64,F,20
+Land transport accidents,65-69,F,25
+Land transport accidents,70-74,F,14
+Land transport accidents,75-79,F,23
+Land transport accidents,80-84,F,27
+Land transport accidents,85+,F,28
+Suicide,0-4,M,0
+Suicide,5-9,M,0
+Suicide,10-14,M,16
+Suicide,15-19,M,108
+Suicide,20-24,M,148
+Suicide,25-29,M,155
+Suicide,30-34,M,159
+Suicide,35-39,M,163
+Suicide,40-44,M,210
+Suicide,45-49,M,181
+Suicide,50-54,M,183
+Suicide,55-59,M,141
+Suicide,60-64,M,116
+Suicide,65-69,M,86
+Suicide,70-74,M,63
+Suicide,75-79,M,53
+Suicide,80-84,M,43
+Suicide,85+,M,60
+Suicide,0-4,F,0
+Suicide,5-9,F,0
+Suicide,10-14,F,6
+Suicide,15-19,F,40
+Suicide,20-24,F,52
+Suicide,25-29,F,45
+Suicide,30-34,F,48
+Suicide,35-39,F,58
+Suicide,40-44,F,77
+Suicide,45-49,F,58
+Suicide,50-54,F,66
+Suicide,55-59,F,46
+Suicide,60-64,F,46
+Suicide,65-69,F,24
+Suicide,70-74,F,21
+Suicide,75-79,F,18
+Suicide,80-84,F,10
+Suicide,85+,F,18
+Accidental poisoning,0-4,M,2
+Accidental poisoning,5-9,M,0
+Accidental poisoning,10-14,M,2
+Accidental poisoning,15-19,M,9
+Accidental poisoning,20-24,M,36
+Accidental poisoning,25-29,M,65
+Accidental poisoning,30-34,M,92
+Accidental poisoning,35-39,M,121
+Accidental poisoning,40-44,M,109
+Accidental poisoning,45-49,M,96
+Accidental poisoning,50-54,M,76
+Accidental poisoning,55-59,M,41
+Accidental poisoning,60-64,M,20
+Accidental poisoning,65-69,M,18
+Accidental poisoning,70-74,M,5
+Accidental poisoning,75-79,M,6
+Accidental poisoning,80-84,M,7
+Accidental poisoning,85+,M,10
+Accidental poisoning,0-4,F,1
+Accidental poisoning,5-9,F,0
+Accidental poisoning,10-14,F,0
+Accidental poisoning,15-19,F,2
+Accidental poisoning,20-24,F,14
+Accidental poisoning,25-29,F,26
+Accidental poisoning,30-34,F,39
+Accidental poisoning,35-39,F,38
+Accidental poisoning,40-44,F,47
+Accidental poisoning,45-49,F,39
+Accidental poisoning,50-54,F,41
+Accidental poisoning,55-59,F,26
+Accidental poisoning,60-64,F,18
+Accidental poisoning,65-69,F,15
+Accidental poisoning,70-74,F,13
+Accidental poisoning,75-79,F,6
+Accidental poisoning,80-84,F,6
+Accidental poisoning,85+,F,12
