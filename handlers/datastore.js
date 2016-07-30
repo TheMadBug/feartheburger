@@ -15,7 +15,7 @@ Datastore.parsePopulation = function(filename, cb) {
         var baseKeysSet = {gender:true, state:true, regional:true}
         var ageRows = []
         rows.map(row => {
-            var regional = row.regional === 'TRUE'
+            var regional = row.regional === 'TRUE' || row.regional === 'true'
             var baseRow = {gender:row.gender, state:row.state, regional:regional}
             Object.keys(row).filter(k => baseKeys.indexOf(k) == -1).forEach(k => {
                 var age = k
