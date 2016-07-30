@@ -5,7 +5,7 @@ window.userProfile = {
     regional: null,
 };
 
-NUM_SLOT_ELEMENTS = 5;
+NUM_SLOT_ELEMENTS = 10;
 IMG_PATH = "/img/flat/";
 GENDER_LOOKUP = {"M" : "Male", "F" : "Female"};
 REGION_LOOKUP = ["Non-regional", "Regional"];
