@@ -20,8 +20,13 @@ app.get('/', function(request, response) {
  */
 app.get('/outcomesFor', function(req, res) {
   var demo = JSON.parse( req.query['demo'] )
+  var category = req.query['category']
+  console.log(`category = ${category}`)
 
   var results = Datastore.chancesFor( demo )
+  if (category) {
+    results = results.filter(row => {return row.category === category})
+  }
 
   res.setHeader('Content-Type', 'application/json');
   res.send( JSON.stringify(results) )
