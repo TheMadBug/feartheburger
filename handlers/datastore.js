@@ -44,29 +44,27 @@ Datastore.parseAbsolute = function(filename, cb) {
     Datastore.parse(filename, (error, rows) => {
         if (error) { return cb(error) }
         matchingColumns = ['gender','state','regional','age']
-        rows.filter(row => row.number > 0).forEach(row => {
+
+        var chanceRows = rows.filter(row => {return row.chance})
+        var populationRows =  rows.filter(row => {return row.number > 0 && !row.chance}).map(row => {
             var ands = [];
             Object.keys(row).forEach(k => {
                 if (matchingColumns.indexOf(k) != -1) {
                     var query = {}
                     query[k] = {$eq: row[k]}
-                    ands.push( query );
+                    ands.push( query )
                 }
             })
             var relevantRows = Datastore.populationCollection.find({$and: ands})
             var totalNumber = relevantRows.map(row => row.number).reduce((p,c) => {return p + c},0)
 
-            if (totalNumber === 0) {
-                console.log(JSON.stringify(ands))
-                console.log(JSON.stringify(relevantRows))
-                console.log(`totalNumber for stats = ${totalNumber}`)
-            }
-
             var chance = row.number / totalNumber
 
             row.chance = chance
+            return row
         })
-        cb(null, rows)
+        
+        cb(null, populationRows.concat(chanceRows))
     })
 }
 
