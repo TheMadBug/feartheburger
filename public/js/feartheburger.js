@@ -5,6 +5,45 @@ window.userProfile = {
     regional: null,
 };
 
+MAX_SLOT_ELEMENTS = 10; //9999;
+IMG_PATH = "/img/flat/";
+GENDER_LOOKUP = {"M" : "Male", "F" : "Female"};
+REGION_LOOKUP = ["Non-regional", "Regional"];
+
+// We put 1 of these on the top - but they can never be picked (we rig the slot machine function in randomizeSlotMachine)
+// The normal shark/terrorism etc will be added in per normal odds so it could be picked
+FAKE_TOP = ['shark2.png', 'terrorism.png'];
+
+function randomElement(myArray) {
+    var i = Math.floor(Math.random() * myArray.length);
+    return myArray[i];
+}
+
+function setDemographicText() {
+    var age = userProfile['age'];
+    var gender = userProfile['gender'];
+    var state = userProfile['state'];
+    var regional = userProfile['regional'];
+
+    var demographics = [];
+    if (age) {
+        demographics.push(age + ' year old');
+    }
+    if (gender) {
+        demographics.push(GENDER_LOOKUP[gender]);
+    }
+    if (state) {
+        demographics.push(state);
+    }
+    if (regional) {
+        demographics.push(REGION_LOOKUP[1*regional]);
+    }
+
+    var demographicText = demographics.join(', ');
+    $("#demographic-display").text(demographicText || 'Average Australian');
+}
+
+
 function getOutcomes(category, callBackFunc) {
     var DEMO_KEYS = ["gender", "age", "state", "regional"];
     var demo = {};
@@ -33,17 +72,50 @@ function showButton(buttonSelect) {
     $(buttonSelect, ".footer").show();
 }
 
+function handleSpinEnd(element) {
+    console.log("handleSpinEnd")
+    console.log(element);
+    var resultContainer = $("#machine1Result");
+
+    var name = $(element).attr("name");
+    console.log("name = " + name);
+    resultContainer.text(name)
+
+}
+
+
+function addCauseToSlotMachine(img_path, name) {
+    jQuery('<img/>', {
+        src: img_path,
+        class: 'cause-of-death-image',
+        name: name,
+    }).appendTo('#machine1');
+}
+
+
 function setupMain() {
     console.log("Setup Main");
 
     // So - need to go through this, and using the chance, pick out X (enough for the )
     var populateData = function(data) {
+        // shorten for testing?
+        if (data.length > MAX_SLOT_ELEMENTS) {
+            data = data.splice(0, MAX_SLOT_ELEMENTS);
+        }
+
         // {"outcome" : "GRIM_Stroke", "chance":0.03115690731391455, "valid":true,"id":"GRIM_Stroke","name":"Stroke","text":null,
         // "icon":"heart.png", "category":"DEATH"}
 
-        // TODO: clear any old ones.
+        // Clear any previous slot machine
+        // Should I call $("#machine1").slotMachine().destroy()?
+        $('#machine1').empty();
 
-        for (var i=0 ; i<Math.max(data.length, 10) ; ++i) {
+        if (FAKE_TOP) { // Add 1 from it
+            var img_path = IMG_PATH + randomElement(FAKE_TOP);
+            addCauseToSlotMachine(img_path, name);
+        }
+
+        for (var i=0 ; i<data.length ; ++i) {
             var record = data[i];
             if (record["valid"] && record["icon"]) {
                 var outcome = record["outcome"];
@@ -53,22 +125,18 @@ function setupMain() {
                 var text = record["text"];
                 var icon = record["icon"];
 
-                var img_path = "/img/flat/" + record["icon"];
-
-                jQuery('<img/>', {
-                    src: img_path,
-                    class: 'cause-of-death-image',
-                    name: name,
-                }).appendTo('#machine1');
+                var img_path = IMG_PATH + record["icon"];
+                addCauseToSlotMachine(img_path, name);
             }
         }
-        console.log(data.length + " rows of data returned");
-
-        console.log("done with outcomes")
 
         machine1 = $("#machine1").slotMachine({
             active	: 0,
-            delay	: 500
+            delay	: 500,
+            randomize : function(activeElementIndex) {
+                // Compensates for the 1 added from FAKE_TOP
+                return 1 + Math.random() * (data.length - 1);
+            }
         });
     };
 
@@ -76,12 +144,10 @@ function setupMain() {
 
 
     function onComplete(active) {
-        //console.log("active=" + active);
-//        var data = CAUSE_OF_DEATH[active];
- //       var name = data["name"];
-        //console.log("name=" + name);
-
-//        $("#machine1Result").text(name);
+        console.log("active=" + active);
+        var container = $(".slotMachineContainer", "#machine1");
+        var selectdChild = container.children()[active+1];
+        handleSpinEnd(selectdChild);
     }
 
     $("#spinButton").click(function(){
