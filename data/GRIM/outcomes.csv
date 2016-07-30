@@ -1,46 +1,46 @@
-id,name,text,category
-"Accidental drowning","Accidental drowning","Swimming is fun! Http://swimaustralia.org.au/",DEATH
-"Accidental poisoning","Accidental poisoning",,DEATH
-"All certain conditions originating in the perinatal period","All certain conditions originating in the perinatal period",,DEATH
-"All certain infectious and parasitic diseases","All certain infectious and parasitic diseases",,DEATH
-"All congenital malformations, deformations and chromosomal abnormalities","All congenital malformations, deformations and chromosomal abnormalities",,DEATH
-"All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism","All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism",,DEATH
-"All diseases of the circulatory system","All diseases of the circulatory system",,DEATH
-"All diseases of the digestive system","All diseases of the digestive system",,DEATH
-"All diseases of the ear and mastoid process","All diseases of the ear and mastoid process",,DEATH
-"All diseases of the eye and adnexa","All diseases of the eye and adnexa",,DEATH
-"All diseases of the genitourinary system","All diseases of the genitourinary system",,DEATH
-"All diseases of the musculoskeletal system and connective tissue","All diseases of the musculoskeletal system and connective tissue",,DEATH
-"All diseases of the nervous system","All diseases of the nervous system",,DEATH
-"All diseases of the respiratory system","All diseases of the respiratory system",,DEATH
-"All diseases of the skin and subcutaneous tissue","All diseases of the skin and subcutaneous tissue",,DEATH
-"All endocrine, nutritional and metabolic diseases","All endocrine, nutritional and metabolic diseases",,DEATH
-"All external causes of morbidity and mortality","All external causes of morbidity and mortality",,DEATH
-"All mental and behavioural disorders","All mental and behavioural disorders",,DEATH
-"All neoplasms","All neoplasms",,DEATH
-"All pregnancy, childbirth and the puerperium","All pregnancy, childbirth and the puerperium",,DEATH
-Assault,Assault,,DEATH
-Asthma,Asthma,,DEATH
-"Breast cancer","Breast cancer",,DEATH
-"Cerebrovascular disease","Cerebrovascular disease",,DEATH
-"Chronic kidney disease","Chronic kidney disease",,DEATH
-"Chronic obstructive pulmonary disease","Chronic obstructive pulmonary disease",,DEATH
-"Colorectal cancer","Colorectal cancer",,DEATH
-"Coronary heart disease","Coronary heart disease",,DEATH
-"Dementia and Alzheimer disease","Dementia and Alzheimer disease",,DEATH
-Diabetes,Diabetes,,DEATH
-"Heart failure","Heart failure",,DEATH
-"Hypertensive disease","Hypertensive disease",,DEATH
-"Influenza and pneumonia","Influenza and pneumonia",,DEATH
-"Kidney failure","Kidney failure",,DEATH
-"Land transport accidents","Land transport accidents",,DEATH
-"Liver disease","Liver disease",,DEATH
-"Lung cancer","Lung cancer",,DEATH
-Melanoma,Melanoma,,DEATH
-Osteoarthritis,Osteoarthritis,,DEATH
-Osteoporosis,Osteoporosis,,DEATH
-"Pancreatic cancer","Pancreatic cancer",,DEATH
-"Prostate cancer","Prostate cancer",,DEATH
-"Rheumatoid arthritis","Rheumatoid arthritis",,DEATH
-Stroke,Stroke,,DEATH
-Suicide,Suicide,,DEATH
+id,name,text,category,icon
+Accidental drowning,Accidental drowning,Swimming is fun! Http://swimaustralia.org.au/,DEATH,heart.png
+Accidental poisoning,Accidental poisoning,,DEATH,heart.png
+All certain conditions originating in the perinatal period,All certain conditions originating in the perinatal period,,DEATH,heart.png
+All certain infectious and parasitic diseases,All certain infectious and parasitic diseases,,DEATH,heart.png
+"All congenital malformations, deformations and chromosomal abnormalities","All congenital malformations, deformations and chromosomal abnormalities",,DEATH,heart.png
+All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism,,DEATH,heart.png
+All diseases of the circulatory system,All diseases of the circulatory system,,DEATH,heart.png
+All diseases of the digestive system,All diseases of the digestive system,,DEATH,heart.png
+All diseases of the ear and mastoid process,All diseases of the ear and mastoid process,,DEATH,heart.png
+All diseases of the eye and adnexa,All diseases of the eye and adnexa,,DEATH,heart.png
+All diseases of the genitourinary system,All diseases of the genitourinary system,,DEATH,heart.png
+All diseases of the musculoskeletal system and connective tissue,All diseases of the musculoskeletal system and connective tissue,,DEATH,heart.png
+All diseases of the nervous system,All diseases of the nervous system,,DEATH,heart.png
+All diseases of the respiratory system,All diseases of the respiratory system,,DEATH,heart.png
+All diseases of the skin and subcutaneous tissue,All diseases of the skin and subcutaneous tissue,,DEATH,heart.png
+"All endocrine, nutritional and metabolic diseases","All endocrine, nutritional and metabolic diseases",,DEATH,heart.png
+All external causes of morbidity and mortality,All external causes of morbidity and mortality,,DEATH,heart.png
+All mental and behavioural disorders,All mental and behavioural disorders,,DEATH,heart.png
+All neoplasms,All neoplasms,,DEATH,heart.png
+"All pregnancy, childbirth and the puerperium","All pregnancy, childbirth and the puerperium",,DEATH,heart.png
+Assault,Assault,,DEATH,heart.png
+Asthma,Asthma,,DEATH,heart.png
+Breast cancer,Breast cancer,,DEATH,heart.png
+Cerebrovascular disease,Cerebrovascular disease,,DEATH,heart.png
+Chronic kidney disease,Chronic kidney disease,,DEATH,heart.png
+Chronic obstructive pulmonary disease,Chronic obstructive pulmonary disease,,DEATH,heart.png
+Colorectal cancer,Colorectal cancer,,DEATH,heart.png
+Coronary heart disease,Coronary heart disease,,DEATH,heart.png
+Dementia and Alzheimer disease,Dementia and Alzheimer disease,,DEATH,heart.png
+Diabetes,Diabetes,,DEATH,heart.png
+Heart failure,Heart failure,,DEATH,heart.png
+Hypertensive disease,Hypertensive disease,,DEATH,heart.png
+Influenza and pneumonia,Influenza and pneumonia,,DEATH,heart.png
+Kidney failure,Kidney failure,,DEATH,heart.png
+Land transport accidents,Land transport accidents,,DEATH,heart.png
+Liver disease,Liver disease,,DEATH,heart.png
+Lung cancer,Lung cancer,,DEATH,heart.png
+Melanoma,Melanoma,,DEATH,heart.png
+Osteoarthritis,Osteoarthritis,,DEATH,heart.png
+Osteoporosis,Osteoporosis,,DEATH,heart.png
+Pancreatic cancer,Pancreatic cancer,,DEATH,heart.png
+Prostate cancer,Prostate cancer,,DEATH,heart.png
+Rheumatoid arthritis,Rheumatoid arthritis,,DEATH,heart.png
+Stroke,Stroke,,DEATH,heart.png
+Suicide,Suicide,,DEATH,heart.png

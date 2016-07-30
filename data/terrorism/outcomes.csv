@@ -1,2 +1,2 @@
-id,name,text,category
-terrorism,Terrorist Attack,"The National Security Hotline 1800 123 400, https://www.nationalsecurity.gov.au/WhatAustraliaisdoing/Pages/TheNationalSecurityHotline.aspx",DEATH
+id,name,text,category,icon
+terrorism,Terrorist Attack,"The National Security Hotline 1800 123 400, https://www.nationalsecurity.gov.au/WhatAustraliaisdoing/Pages/TheNationalSecurityHotline.aspx",DEATH,terrorism.png
