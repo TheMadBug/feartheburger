@@ -10,7 +10,7 @@
   <% include ../partials/nav.ejs %>
 
     <div class="container-fluid main-panel">
-      <div class="panel panel-default">
+      <div id="main-container" class="panel panel-default">
         <div class="panel-heading">
           Whats gonna kill me?
         </div>
@@ -28,10 +28,68 @@
     				<div id="machine1Result" class="machineResult"></div>
         </div>
       </div>
+
+      <div id="profile-container" class="panel panel-default initial-hide">
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="gender-radio" value='M'>Male</label>
+          <label class="radio-inline"><input type="radio" name="gender-radio" value='F'>Female</label>
+        </div>
+
+        <div class="form-group">
+          <label for="age-select">Age:</label>
+          <select class="form-control" id="age-select">
+            <option>0-4</option>
+            <option>5–9</option>
+            <option>10–14</option>
+            <option>15–19</option>
+            <option>20–24</option>
+            <option>25–29</option>
+            <option>30–34</option>
+            <option>35–39</option>
+            <option>40–44</option>
+            <option>45–49</option>
+            <option>50–54</option>
+            <option>55–59</option>
+            <option>60–64</option>
+            <option>65–69</option>
+            <option>70–74</option>
+            <option>75–79</option>
+            <option>80–84</option>
+            <option>85+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="state-select">State/Territory:</label>
+          <select class="form-control" id="state-select">
+            <option>ACT</option>
+            <option>NSW</option>
+            <option>NT</option>
+            <option>QLD</option>
+            <option>SA</option>
+            <option>TAS</option>
+            <option>VIC</option>
+            <option>WA</option>
+          </select>
+        </div>
+
+        <div class="checkbox">
+          <label><input id='regional' type="checkbox" value="">Regional</label>
+        </div>
+      </div>
+
+      <div id="config-container" class="panel panel-default initial-hide">
+        This is the config container
+      </div>
+
     </div>
+
+
     <footer class="footer" data-spy="affix-bottom">
       <div class="container-fluid">
-			    <div id="ranomizeButton" type="button" class="btn btn-danger btn-lg">SPIN</div>
+			    <div id="spinButton" type="button" class="btn btn-danger btn-lg">SPIN</div>
+			    <div id="saveProfileButton" type="button" class="initial-hide btn btn-danger btn-lg">SAVE</div>
+			    <div id="saveConfigButton" type="button" class="initial-hide btn btn-danger btn-lg">SAVE</div>
       </div>
     </footer>
 	</body>

@@ -27,6 +27,20 @@ app.get('/outcomesFor', function(req, res) {
   res.send( JSON.stringify(results) )
 })
 
+app.get('/populationFor', function(req, res) {
+  var demo = JSON.parse( req.query['demo'] )
+
+  var results = Datastore.populationRowsFor( demo )
+
+  res.setHeader('Content-Type', 'application/json');
+  res.send( JSON.stringify(results) )
+})
+
+app.get('/debug', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  res.send( JSON.stringify(  Datastore.populationDebug() ))
+})
+
 app.listen(app.get('port'), function() {
   Datastore.init((err, worked) => {
     if (err) {

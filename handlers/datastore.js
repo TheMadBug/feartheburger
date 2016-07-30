@@ -1,6 +1,8 @@
 var csv = require('basic-csv')
 var loki = require('lokijs')
 var Promise = require('bluebird')
+var fs = require('fs')
+
 var Datastore = function() {}
 Datastore.outcomeTypesCollection = null;
 Datastore.chancesCollection = null;
@@ -13,8 +15,10 @@ Datastore.parsePopulation = function(filename, cb) {
         var baseKeysSet = {gender:true, state:true, regional:true}
         var ageRows = []
         rows.map(row => {
-            var baseRow = {gender:row.gender, state:row.state, regional:row.regional}
+            var regional = row.regional === 'TRUE'
+            var baseRow = {gender:row.gender, state:row.state, regional:regional}
             Object.keys(row).filter(k => baseKeys.indexOf(k) == -1).forEach(k => {
+                var age = k
                 var ageRow = Object.assign({},baseRow,{age:k, number:row[k]})
                 ageRows.push(ageRow)
                 //console.log(`ageRow = ${JSON.stringify(ageRow)}`)
@@ -24,24 +28,43 @@ Datastore.parsePopulation = function(filename, cb) {
     })
 }
 
+Datastore.populationRowsFor = function(row) {
+    var ands = [];
+    Object.keys(row).forEach(k => {
+        if (matchingColumns.indexOf(k) != -1) {
+            var query = {}
+            query[k] = {$eq: row[k]}
+            ands.push( query );
+        }
+    })
+    return Datastore.populationCollection.find({$and: ands})
+}
+
 Datastore.parseAbsolute = function(filename, cb) {
     Datastore.parse(filename, (error, rows) => {
         if (error) { return cb(error) }
         matchingColumns = ['gender','state','regional','age']
-        rows.forEach(row => {
+
+        var chanceRows = rows.filter(row => {return row.chance})
+        var populationRows =  rows.filter(row => {return row.number > 0 && !row.chance}).map(row => {
             var ands = [];
             Object.keys(row).forEach(k => {
                 if (matchingColumns.indexOf(k) != -1) {
-                    ands.push( {[k]: {$eq: row[k]}} );
+                    var query = {}
+                    query[k] = {$eq: row[k]}
+                    ands.push( query )
                 }
             })
             var relevantRows = Datastore.populationCollection.find({$and: ands})
             var totalNumber = relevantRows.map(row => row.number).reduce((p,c) => {return p + c},0)
+
             var chance = row.number / totalNumber
 
             row.chance = chance
+            return row
         })
-        cb(null, rows)
+        
+        cb(null, populationRows.concat(chanceRows))
     })
 }
 
@@ -70,6 +93,10 @@ Datastore.parse = function(fileName, cb) {
     })    
 }
 
+Datastore.populationDebug = function() {
+    return Datastore.populationCollection.find({})
+}
+
 Datastore.init = function(cb) {
 
     var db = new loki('lokijs')
@@ -85,19 +112,22 @@ Datastore.init = function(cb) {
 
     var promiseArray = [];
 
-    var outcomeArray = [
-        './data/crime/outcomes.csv',
-        './data/TERRORISM/outcomes.csv'
-    ]
-    var absoluteNumbersArray = [
-        './data/crime/physical_assult.csv',
-        './data/TERRORISM/numbers.csv'
-    ]
+    var outcomeArray = []
+    var absoluteNumbersArray = []
+    var folders = fs.readdirSync('./data')
+    folders.forEach( fn => {
+        var stats = fs.statSync( './data/' + fn )
+        if (stats.isDirectory()) {
+            outcomeArray.push( './data/' + fn + '/outcomes.csv' )
+            absoluteNumbersArray.push( './data/' + fn + '/numbers.csv' )
+        }
+    } )
 
     Promise.promisify(Datastore.parsePopulation)('./data/population.csv').then(populationRows => {
         populationRows.forEach((row) => {
             Datastore.populationCollection.insert(row)
         })
+        console.log('FINISHED population')
         return true;
     }).then(_ => {
         return Promise.all(outcomeArray.map(file => {
@@ -108,10 +138,10 @@ Datastore.init = function(cb) {
             })
         }))
     }).then(_ => {
+         console.log('starting absolute numbers')
         return Promise.all(absoluteNumbersArray.map(file => {
             return Promise.promisify(Datastore.parseAbsolute)(file).then(outcomeRows => {
                 outcomeRows.forEach((row) => {
-                    console.log(`Recording chance = ${JSON.stringify(row)}`)
                     Datastore.chancesCollection.insert(row)
                 })
             })
@@ -147,11 +177,9 @@ Datastore.chancesFor = function(person) {
         })
     })
     var query = {$and: queryAnds}
-    console.log(`query = ${JSON.stringify(query)}`)
     var rows = Datastore.chancesCollection.find(query)
 
-    console.log(`All relevant rows =`)
-    console.log(JSON.stringify(rows))
+    console.log(`All relevant rows length = ${rows.length}`)
 
     var uniqueRows = []
     var uniqueRowMap = {};
