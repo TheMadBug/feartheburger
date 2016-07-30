@@ -1,46 +1,46 @@
 id,name,text,category
-drowning,"Accidental drowning","Swimming is fun! Http://swimaustralia.org.au/",DEATH
-poisoning,"Accidental poisoning",,DEATH
-perinatal,"All certain conditions originating in the perinatal period",,DEATH
-infectious_parasitic,"All certain infectious and parasitic diseases",,DEATH
-congenital,"All congenital malformations, deformations and chromosomal abnormalities",,DEATH
-blood_immune,"All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism",,DEATH
-circulatory,"All diseases of the circulatory system",,DEATH
-disgestive_system,"All diseases of the digestive system",,DEATH
-ear,"All diseases of the ear and mastoid process",,DEATH
-eye,"All diseases of the eye and adnexa",,DEATH
-genitourinary,"All diseases of the genitourinary system",,DEATH
-musculoskeletal,"All diseases of the musculoskeletal system and connective tissue",,DEATH
-nervous_system,"All diseases of the nervous system",,DEATH
-respiratory_system,"All diseases of the respiratory system",,DEATH
-skin,"All diseases of the skin and subcutaneous tissue",,DEATH
-endocrine,"All endocrine, nutritional and metabolic diseases",,DEATH
-external,"All external causes of morbidity and mortality",,DEATH
-mental,"All mental and behavioural disorders",,DEATH
-neoplasm,"All neoplasms",,DEATH
-pregnancy,"All pregnancy, childbirth and the puerperium",,DEATH
-assault,Assault,,DEATH
-asthma,Asthma,,DEATH
-breast_cancer,"Breast cancer",,DEATH
-cerebrovascular,"Cerebrovascular disease",,DEATH
-kidney_chronic,"Chronic kidney disease",,DEATH
-pulmonary,"Chronic obstructive pulmonary disease",,DEATH
-colorectal,"Colorectal cancer",,DEATH
-coronary,"Coronary heart disease",,DEATH
-dementia,"Dementia and Alzheimer disease",,DEATH
-diabetes,Diabetes,,DEATH
-heart_failure,"Heart failure",,DEATH
-hypertension,"Hypertensive disease",,DEATH
-influenza,"Influenza and pneumonia",,DEATH
-kidney_failure,"Kidney failure",,DEATH
-land_transport_accidents,"Land transport accidents",,DEATH
-liver,"Liver disease",,DEATH
-lung_cancer,"Lung cancer",,DEATH
-melanoma,Melanoma,,DEATH
-osteoarthritis,Osteoarthritis,,DEATH
-osteoporosis,Osteoporosis,,DEATH
-pancreatic_cancer,"Pancreatic cancer",,DEATH
-prostate_cancer,"Prostate cancer",,DEATH
-arthritis,"Rheumatoid arthritis",,DEATH
-stroke,Stroke,,DEATH
-suicide,Suicide,,DEATH
+"Accidental drowning","Accidental drowning","Swimming is fun! Http://swimaustralia.org.au/",DEATH
+"Accidental poisoning","Accidental poisoning",,DEATH
+"All certain conditions originating in the perinatal period","All certain conditions originating in the perinatal period",,DEATH
+"All certain infectious and parasitic diseases","All certain infectious and parasitic diseases",,DEATH
+"All congenital malformations, deformations and chromosomal abnormalities","All congenital malformations, deformations and chromosomal abnormalities",,DEATH
+"All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism","All diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism",,DEATH
+"All diseases of the circulatory system","All diseases of the circulatory system",,DEATH
+"All diseases of the digestive system","All diseases of the digestive system",,DEATH
+"All diseases of the ear and mastoid process","All diseases of the ear and mastoid process",,DEATH
+"All diseases of the eye and adnexa","All diseases of the eye and adnexa",,DEATH
+"All diseases of the genitourinary system","All diseases of the genitourinary system",,DEATH
+"All diseases of the musculoskeletal system and connective tissue","All diseases of the musculoskeletal system and connective tissue",,DEATH
+"All diseases of the nervous system","All diseases of the nervous system",,DEATH
+"All diseases of the respiratory system","All diseases of the respiratory system",,DEATH
+"All diseases of the skin and subcutaneous tissue","All diseases of the skin and subcutaneous tissue",,DEATH
+"All endocrine, nutritional and metabolic diseases","All endocrine, nutritional and metabolic diseases",,DEATH
+"All external causes of morbidity and mortality","All external causes of morbidity and mortality",,DEATH
+"All mental and behavioural disorders","All mental and behavioural disorders",,DEATH
+"All neoplasms","All neoplasms",,DEATH
+"All pregnancy, childbirth and the puerperium","All pregnancy, childbirth and the puerperium",,DEATH
+Assault,Assault,,DEATH
+Asthma,Asthma,,DEATH
+"Breast cancer","Breast cancer",,DEATH
+"Cerebrovascular disease","Cerebrovascular disease",,DEATH
+"Chronic kidney disease","Chronic kidney disease",,DEATH
+"Chronic obstructive pulmonary disease","Chronic obstructive pulmonary disease",,DEATH
+"Colorectal cancer","Colorectal cancer",,DEATH
+"Coronary heart disease","Coronary heart disease",,DEATH
+"Dementia and Alzheimer disease","Dementia and Alzheimer disease",,DEATH
+Diabetes,Diabetes,,DEATH
+"Heart failure","Heart failure",,DEATH
+"Hypertensive disease","Hypertensive disease",,DEATH
+"Influenza and pneumonia","Influenza and pneumonia",,DEATH
+"Kidney failure","Kidney failure",,DEATH
+"Land transport accidents","Land transport accidents",,DEATH
+"Liver disease","Liver disease",,DEATH
+"Lung cancer","Lung cancer",,DEATH
+Melanoma,Melanoma,,DEATH
+Osteoarthritis,Osteoarthritis,,DEATH
+Osteoporosis,Osteoporosis,,DEATH
+"Pancreatic cancer","Pancreatic cancer",,DEATH
+"Prostate cancer","Prostate cancer",,DEATH
+"Rheumatoid arthritis","Rheumatoid arthritis",,DEATH
+Stroke,Stroke,,DEATH
+Suicide,Suicide,,DEATH
