@@ -1,0 +1,43 @@
+.cause-of-death-image {
+    width: 500px;
+    height: 500px;
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+}
+
+
+#assault-image {
+    background-image: url("/img/flat/assault.png");
+}
+
+#terrorism-image {
+    background-image: url("/img/flat/terrorism.png");
+}
+
+#cancer-image {
+    background-image: url("/img/flat/cancer.jpg");
+}
+
+#car-image {
+    background-image: url("/img/flat/car.png");
+}
+
+#heart-image {
+    background-image: url("/img/flat/heart.png");
+}
+
+#motorbike-image {
+    background-image: url("/img/flat/motorbike.png");
+}
+
+#suicide-image {
+    background-image: url("/img/flat/noose.png");
+}
+
+#poison-image {
+    background-image: url("/img/flat/poison.png");
+}
+
+#shark-image {
+    background-image: url("/img/flat/shark2.png");
+}

@@ -1,21 +1,37 @@
 $(document).ready(function(){
+    console.log("Populating causes of death");
+    
+    // Add children to slot machine1
+    var CAUSE_OF_DEATH = [
+        {id : 'assault-image', name: "Assault"},
+        {id : 'terrorism-image', name: "Terrorism"},
+        {id : 'cancer-image', name: "Cancer"},
+        {id : 'car-image', name: "Car"},
+        {id : 'heart-image', name: "Heart"},
+        {id : 'motorbike-image', name: "Motorbike"},
+        {id : 'suicide-image', name: "Suicide"},
+        {id : 'poison-image', name: "Poison"},
+        {id : 'shark-image', name: "Shark Attack"},
+    ];
+    
+    for (var i=0 ; i<CAUSE_OF_DEATH.length; ++i) {
+        var data = CAUSE_OF_DEATH[i];
+        jQuery('<div/>', {
+            id: data['id'],
+            class: 'cause-of-death-image',
+            name: data['name'],
+        }).appendTo('#machine1');
+    }
+
     var machine1 = $("#machine1").slotMachine({
         active	: 0,
         delay	: 500
     });
 
-    function onComplete(active){
-        switch(this.element[0].id){
-            case 'machine1':
-                $("#machine1Result").text("Index: "+this.active);
-                break;
-            case 'machine2':
-                $("#machine2Result").text("Index: "+this.active);
-                break;
-            case 'machine3':
-                $("#machine3Result").text("Index: "+this.active);
-                break;
-        }
+    function onComplete(active) {
+        var data = CAUSE_OF_DEATH[active];
+        var name = data["name"];
+        $("#machine1Result").text(name);
     }
 
     $("#ranomizeButton").click(function(){
