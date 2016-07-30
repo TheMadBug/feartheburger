@@ -1,0 +1,13 @@
+id,name,text,category
+assault,"Offences against the person, excluding sexual",,CRIME
+"sexual offences (non-rape)","Sexual assaults (excluding rape)",,CRIME
+rape,Rape,,CRIME
+robbery,"Robbery and extortion offences",,CRIME
+arson,"Arson and explosives",,CRIME
+"property damage","Property damage and environmental offences",,CRIME
+"criminal trepass","Serious criminal tresspass / break and enter",,CRIME
+"other offenses against property","All other offences against property",,CRIME
+"drug offences","Drug offences",,CRIME
+"driving under alcohol drugs","Driving under influence of alcohol or drugs",,CRIME
+"dangerous driving","Dangerous driving",,CRIME
+"other driving offences","Other driving related offences",,CRIME

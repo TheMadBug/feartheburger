@@ -1,0 +1,25 @@
+outcome,state,region,chances
+assault,SA,REGIONAL,0.01065
+"sexual offences (non-rape)",SA,REGIONAL,0.00092
+rape,SA,REGIONAL,0.00035
+robbery,SA,REGIONAL,0.00013
+arson,SA,REGIONAL,0.00122
+"property damage",SA,REGIONAL,0.01213
+"criminal trepass",SA,REGIONAL,0.00826
+"other offenses against property",SA,REGIONAL,0.02566
+"drug offences",SA,REGIONAL,0.00415
+"driving under alcohol drugs",SA,REGIONAL,0.00576
+"dangerous driving",SA,REGIONAL,0.00184
+"other driving offences",SA,REGIONAL,0.00948
+assault,SA,CITY,0.01083
+"sexual offences (non-rape)",SA,CITY,0.00082
+rape,SA,CITY,0.00036
+robbery,SA,CITY,0.00064
+arson,SA,CITY,0.0014
+"property damage",SA,CITY,0.01098
+"criminal trepass",SA,CITY,0.00922
+"other offenses against property",SA,CITY,0.03829
+"drug offences",SA,CITY,0.00357
+"driving under alcohol drugs",SA,CITY,0.00415
+"dangerous driving",SA,CITY,0.00129
+"other driving offences",SA,CITY,0.00769
