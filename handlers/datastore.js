@@ -5,75 +5,149 @@ var Promise = require('bluebird')
 var Datastore = function() {}
 Datastore.outcomeTypesCollection = null;
 Datastore.chancesCollection = null;
+Datastore.populationCollection = null;
 
-Datastore.parse = function(fileName, collection, cb) {
-    let outcomesTypes = csv.readCSV(fileName, {
+Datastore.parsePopulation = function(filename, cb) {
+    Datastore.parse(filename, (error, rows) => {
+        if (error) { return cb(error) }
+        var baseKeys = ['gender','state','regional']
+        var baseKeysSet = {gender:true, state:true, regional:true}
+        var ageRows = []
+        rows.map(row => {
+            var baseRow = {gender:row.gender, state:row.state, regional:row.regional}
+            Object.keys(row).filter(k => baseKeys.indexOf(k) == -1).forEach(k => {
+                var ageRow = Object.assign({},baseRow,{age:k, number:row[k]})
+                ageRows.push(ageRow)
+                //console.log(`ageRow = ${JSON.stringify(ageRow)}`)
+            })
+        })
+        cb(null, ageRows)
+    })
+}
+
+Datastore.parseAbsolute = function(filename, cb) {
+    Datastore.parse(filename, (error, rows) => {
+        if (error) { return cb(error) }
+        matchingColumns = ['gender','state','regional','age']
+        rows.forEach(row => {
+            var ands = [];
+            Object.keys(row).forEach(k => {
+                if (matchingColumns.indexOf(k) != -1) {
+                    ands.push( {[k]: {$eq: row[k]}} );
+                }
+            })
+            var relevantRows = Datastore.populationCollection.find({$and: ands})
+            var totalNumber = relevantRows.map(row => row.number).reduce((p,c) => {return p + c},0)
+            var chance = row.number / totalNumber
+
+            row.chance = chance
+        })
+        cb(null, rows)
+    })
+}
+
+Datastore.parse = function(fileName, cb) {
+    var outcomesTypes = csv.readCSV(fileName, {
         // parse properties go here
     }, function (error, rows) {
         if (error) {
             return cb(error)
         }
-        let headerRow = rows[0]
-        let dataRows = rows.slice(1)
-        dataRows.forEach(row => {
-            let json = {}
+        var headerRow = rows[0]
+        var dataRows = rows.slice(1)
+        var objects = dataRows.map(row => {
+            var json = {}
             headerRow.forEach((col, index) => {
-                let value = row[index]
+                var value = row[index]
                 if (value === '') {
                     value = null
                 }
                 json[col] = value
             })
-            collection.insert(json)
+            return json
         })
-        console.log(`Finishing parsing ${fileName} have inserted ${collection.count()}`)
-        cb(null,true)
+        console.log(`Finishing parsing ${fileName} have inserted ${objects.length}`)
+        cb(null,objects)
     })    
 }
 
 Datastore.init = function(cb) {
 
-    let db = new loki('lokijs')
+    var db = new loki('lokijs')
     Datastore.outcomeTypesCollection = db.addCollection('outcomes', {
         unique: ['id']
     })
     Datastore.chancesCollection = db.addCollection('chances', {
         indices: ['gender','outcome']
     })
-    let promiseParse = Promise.promisify(Datastore.parse)
-    
-    Promise.promisify(Datastore.parse)('./data/outcomes.csv', Datastore.outcomeTypesCollection).then(() => {
-        return Promise.promisify(Datastore.parse)('./data/chances.csv', Datastore.chancesCollection)
+    Datastore.populationCollection = db.addCollection('population', {
+        indices: ['gender','state','age','regional']
+    })
+
+    var promiseArray = [];
+
+    var outcomeArray = ['./data/crime/outcomes.csv']
+    var absoluteNumbersArray = ['./data/crime/physical_assult.csv']
+
+    Promise.promisify(Datastore.parsePopulation)('./data/population.csv').then(populationRows => {
+        populationRows.forEach((row) => {
+            Datastore.populationCollection.insert(row)
+        })
+        return true;
+    }).then(_ => {
+        return Promise.all(outcomeArray.map(file => {
+            return Promise.promisify(Datastore.parse)(file).then(outcomeRows => {
+                outcomeRows.forEach((row) => {
+                    Datastore.outcomeTypesCollection.insert(row)
+                })
+            })
+        }))
+    }).then(_ => {
+        return Promise.all(absoluteNumbersArray.map(file => {
+            return Promise.promisify(Datastore.parseAbsolute)(file).then(outcomeRows => {
+                outcomeRows.forEach((row) => {
+                    Datastore.chancesCollection.insert(row)
+                })
+            })
+        }))
     }).then(_ => {
         console.log('CALLING CALLBACK NOW')
         cb(null,true)
     }).catch(err => {
         cb(err)
     })
-
 }
 
 Datastore.chancesFor = function(person) {
-    let queryAnds = []
+    var queryAnds = []
     Object.keys(person).forEach(key => {
-        let value = person[key];
+        var value = person[key];
+        var checkEq = {}
+        checkEq[key] = {$eq: value}
+
+        var checkNull = {}
+        checkEq[key] = {$eq: null}
+
+        var checkUndefined = {}
+        checkEq[key] = {$eq: undefined}
+
         queryAnds.push({$or:
             [
-                {[key]: {$eq: value}},
+                checkEq,
                 //TODO double check to see if this works for absent values
-                {[key]: {$eq: null}},
-                {[key]: {$eq: undefined}}
+                checkNull,
+                checkUndefined
             ]
         })
     })
-    let query = {$and: queryAnds}
-    let rows = Datastore.chancesCollection.find(query)
+    var query = {$and: queryAnds}
+    var rows = Datastore.chancesCollection.find(query)
 
     return rows.map(row => {
-        let output = {}
+        var output = {}
         output.outcome = row.outcome
         output.chance = row.chance
-        let outcomeRow = Datastore.outcomeTypesCollection.findOne({id: row.outcome})
+        var outcomeRow = Datastore.outcomeTypesCollection.findOne({id: row.outcome})
         if (outcomeRow) {
             output.valid = true;
             Object.keys(outcomeRow).filter(key => {return key != 'meta' && key != '$loki'}).forEach(key => {

@@ -19,9 +19,9 @@ app.get('/', function(request, response) {
  * then call get to '/outcomesFor?demo=' + encodeURIComponent( JSON.stringify( demo ))
  */
 app.get('/outcomesFor', function(req, res) {
-  let demo = JSON.parse( req.param('demo') )
+  var demo = JSON.parse( req.param('demo') )
 
-  let results = Datastore.chancesFor( demo )
+  var results = Datastore.chancesFor( demo )
 
   res.setHeader('Content-Type', 'application/json');
   res.send( JSON.stringify(results) )
