@@ -1,6 +1,8 @@
 var csv = require('basic-csv')
 var loki = require('lokijs')
 var Promise = require('bluebird')
+var fs = require('fs')
+
 var Datastore = function() {}
 Datastore.outcomeTypesCollection = null;
 Datastore.chancesCollection = null;
@@ -85,14 +87,16 @@ Datastore.init = function(cb) {
 
     var promiseArray = [];
 
-    var outcomeArray = [
-        './data/crime/outcomes.csv',
-        './data/TERRORISM/outcomes.csv'
-    ]
-    var absoluteNumbersArray = [
-        './data/crime/physical_assult.csv',
-        './data/TERRORISM/numbers.csv'
-    ]
+    var outcomeArray = []
+    var absoluteNumbersArray = []
+    let folders = fs.readdirSync('./data')
+    folders.forEach( fn => {
+        let stats = fs.statSync( './data/' + fn )
+        if (stats.isDirectory()) {
+            outcomeArray.push( './data/' + fn + '/outcomes.csv' )
+            absoluteNumbersArray.push( './data/' + fn + '/numbers.csv' )
+        }
+    } )
 
     Promise.promisify(Datastore.parsePopulation)('./data/population.csv').then(populationRows => {
         populationRows.forEach((row) => {
