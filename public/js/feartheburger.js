@@ -5,7 +5,7 @@ window.userProfile = {
     regional: null,
 };
 
-MAX_SLOT_ELEMENTS = 9999;
+NUM_SLOT_ELEMENTS = 5;
 IMG_PATH = "/img/flat/";
 GENDER_LOOKUP = {"M" : "Male", "F" : "Female"};
 REGION_LOOKUP = ["Non-regional", "Regional"];
@@ -83,6 +83,26 @@ function handleSpinEnd(element) {
 
 }
 
+function weightedChoice(data) {
+    var totals = [];
+    var runningTotal = 0.0;
+
+    for (var i=0 ; i<data.length; ++i) {
+        var record = data[i]
+        runningTotal += record['chance'];
+        totals.push(runningTotal);
+    }
+
+    var r = Math.random() * runningTotal;
+    for (var i=0 ; i<totals.length ; ++i) {
+        if (r < totals[i]) {
+            return data[i];
+        }
+    }
+    console.log("This should never happen");
+}
+
+
 
 function addCauseToSlotMachine(img_path, name) {
     jQuery('<img/>', {
@@ -92,17 +112,11 @@ function addCauseToSlotMachine(img_path, name) {
     }).appendTo('#machine1');
 }
 
-
 function setupMain() {
     console.log("Setup Main");
 
     // So - need to go through this, and using the chance, pick out X (enough for the )
     var populateData = function(data) {
-        // shorten for testing?
-        if (data.length > MAX_SLOT_ELEMENTS) {
-            data = data.splice(0, MAX_SLOT_ELEMENTS);
-        }
-
         // {"outcome" : "GRIM_Stroke", "chance":0.03115690731391455, "valid":true,"id":"GRIM_Stroke","name":"Stroke","text":null,
         // "icon":"heart.png", "category":"DEATH"}
 
@@ -115,8 +129,17 @@ function setupMain() {
             addCauseToSlotMachine(img_path, name);
         }
 
-        for (var i=0 ; i<data.length ; ++i) {
-            var record = data[i];
+        var slotElements = [];
+
+        for (var i=0 ; i<NUM_SLOT_ELEMENTS; ++i) {
+            var choice = weightedChoice(data);
+            console.log("choice=" + choice["name"]);
+            slotElements.push(choice);
+        }
+
+        var totalChance = 0;
+        for (var i=0 ; i<slotElements.length ; ++i) {
+            var record = slotElements[i];
             if (record["valid"] && record["icon"]) {
                 var outcome = record["outcome"];
                 var chance = record["chance"];
@@ -125,17 +148,21 @@ function setupMain() {
                 var text = record["text"];
                 var icon = record["icon"];
 
+                totalChance += chance;
+
                 var img_path = IMG_PATH + record["icon"];
                 addCauseToSlotMachine(img_path, name);
             }
         }
+
+        console.log("total chance = " + totalChance);
 
         machine1 = $("#machine1").slotMachine({
             active	: 0,
             delay	: 500,
             randomize : function(activeElementIndex) {
                 // Compensates for the 1 added from FAKE_TOP
-                return 1 + Math.floor(Math.random() * data.length);
+                return 1 + Math.floor(Math.random() * slotElements.length);
             }
         });
     };
