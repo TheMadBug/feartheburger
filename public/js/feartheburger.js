@@ -174,6 +174,7 @@ function setupMain(category) {
 
 
     function onComplete(active) {
+        console.log("active=" + active);
         var container = $(".slotMachineContainer", "#machine1");
         var selectdChild = container.children()[active + 1];
         handleSpinEnd(category, selectdChild);
