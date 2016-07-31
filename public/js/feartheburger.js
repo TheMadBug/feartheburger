@@ -103,15 +103,27 @@ function showButton(buttonSelect) {
     $(buttonSelect, ".footer").show();
 }
 
+function clearSpinResults() {
+    var resultContainer = $("#spin-result-description-container");
+    var chartDiv = $("#chart_div", resultContainer)
+    var resultText = $("#spin-result-text", resultContainer)
+
+    chartDiv.empty();
+    resultText.empty();
+}
+
 function handleSpinEnd(element) {
     console.log("handleSpinEnd")
     console.log(element);
-    var resultContainer = $("#machine1Result");
+    var resultContainer = $("#spin-result-description-container");
+
 
     var name = $(element).attr("name");
     console.log("name = " + name);
-    resultContainer.text(name)
+    var resultText = $("#spin-result-text", resultContainer)
+    resultText.text(name)
 
+    drawDemoChart();
 }
 
 function weightedChoice(data) {
@@ -209,6 +221,7 @@ function setupMain() {
     }
 
     $("#spinButton").click(function(){
+        clearSpinResults();
         machine1.shuffle(5, onComplete);
     })
 }
