@@ -1,0 +1,21 @@
+outcome,state,regional,number
+assault,VIC,false,18545
+burglary,VIC,false,26401
+"crimes against persons",VIC,false,24501
+"crimes against property",VIC,false,162735
+"drug offences",VIC,false,9071
+homocide,VIC,false,132
+"property damage",VIC,false,27956
+robber,VIC,false,2364
+"serious injuries",VIC,false,3936
+theft,VIC,false,39183
+assault,VIC,true,20289
+burglary,VIC,true,19015
+"crimes against persons",VIC,true,25265
+"crimes against property",VIC,true,117514
+"drug offences",VIC,true,7921
+homocide,VIC,true,274
+"property damage",VIC,true,32043
+robber,VIC,true,641
+"serious injuries",VIC,true,5033
+theft,VIC,true,19309
