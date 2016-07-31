@@ -158,6 +158,38 @@ Datastore.init = function(cb) {
     })
 }
 
+Datastore.compareChances = function(personA, personB) {
+    var personAChances = Datastore.chancesFor(personA)
+    var personBChances = Datastore.chancesFor(personB)
+
+    var allOutcomes = {}    
+    personAChances.forEach(out => {
+        allOutcomes[out.outcome] = out
+        out.chanceA = out.chance
+        out.chanceB = 0
+        delete out['chance']
+    })
+    personBChances.forEach(out => {
+        var existing = allOutcomes[out.outcome]
+        if (existing) {
+            existing.chanceB = out.chance
+        } else {
+            allOutcomes[out.outcome] = out
+            out.chanceA = 0
+            out.chanceB = out.chance
+            delete out['chance']
+        }
+    })
+    var outcomeArray = []
+    Object.keys(allOutcomes).forEach(key => {
+        let row = allOutcomes[key]
+        outcomeArray.push( allOutcomes[key] )
+        row.chanceDiff = row.chanceA - row.chanceB
+    })
+    outcomeArray = outcomeArray.sort((a, b) => { return b.chanceDiff - a.chanceDiff})
+    return outcomeArray
+}
+
 Datastore.chancesFor = function(person) {
     var queryAnds = []
     Object.keys(person).forEach(key => {
@@ -197,7 +229,7 @@ Datastore.chancesFor = function(person) {
         }
     })
 
-    return uniqueRows.map(row => {
+    let cleanRows = uniqueRows.map(row => {
         var output = {}
         output.outcome = row.outcome
         output.chance = row.chance
@@ -213,6 +245,8 @@ Datastore.chancesFor = function(person) {
 
         return output
     })
+    cleanRows.sort((a,b) => { return b.chance - a.chance })
+    return cleanRows
 }
 
 module.exports = Datastore

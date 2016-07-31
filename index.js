@@ -32,6 +32,21 @@ app.get('/outcomesFor', function(req, res) {
   res.send( JSON.stringify(results) )
 })
 
+app.get('/outcomesCompare', function(req, res) {
+  var demoA = JSON.parse( req.query['demoA'] )
+  var demoB = JSON.parse( req.query['demoB'] )
+  var category = req.query['category']
+  
+  var results = Datastore.compareChances( demoA, demoB )
+
+  if (category) {
+    results = results.filter(row => {return row.category === category})
+  }
+
+  res.setHeader('Content-Type', 'application/json');
+  res.send( JSON.stringify(results) )
+})
+
 app.get('/populationFor', function(req, res) {
   var demo = JSON.parse( req.query['demo'] )
 
