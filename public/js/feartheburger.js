@@ -19,6 +19,34 @@ function randomElement(myArray) {
     return myArray[i];
 }
 
+function getOptions(selectSelect) {
+    var options = [];
+    $("option", selectSelect).each(function() {
+        options.push($(this).val());
+    });
+    return options;    
+}
+
+function getRandomDemographic() {
+    var gender = randomElement(Object.keys(GENDER_LOOKUP));
+    var age = randomElement(getOptions("#age-select"));    
+    var state = randomElement(getOptions("#state-select"));    
+    var regional = Math.round(Math.random()) == true;
+
+    var randProfile = {
+        gender: gender,
+        age: age,
+        state: state,
+        regional: regional,
+    };
+
+    var randomDemographic = getDemoDict(randProfile);
+    console.log("randomDemographic");
+    console.log(randomDemographic);
+    return randomDemographic;
+}
+
+
 function setDemographicText() {
     var age = userProfile['age'];
     var gender = userProfile['gender'];
@@ -43,8 +71,7 @@ function setDemographicText() {
     $("#demographic-display").text(demographicText || 'Average Australian');
 }
 
-
-function getOutcomes(category, callBackFunc) {
+function getDemoDict(userProfile) {
     var DEMO_KEYS = ["gender", "age", "state", "regional"];
     var demo = {};
     for (var i=0 ; i<DEMO_KEYS.length ; ++i) {
@@ -54,7 +81,11 @@ function getOutcomes(category, callBackFunc) {
             demo[k] = val;
         }
     }
+    return demo;
+}
 
+function getOutcomes(category, callBackFunc) {
+    var demo = getDemoDict(userProfile);
     var demoStr = 'demo=' + encodeURIComponent( JSON.stringify( demo ));
     var categoryStr = '&category=' + category;
     var url = '/outcomesFor?' + demoStr + categoryStr;
@@ -72,15 +103,27 @@ function showButton(buttonSelect) {
     $(buttonSelect, ".footer").show();
 }
 
+function clearSpinResults() {
+    var resultContainer = $("#spin-result-description-container");
+    var chartDiv = $("#chart_div", resultContainer)
+    var resultText = $("#spin-result-text", resultContainer)
+
+    chartDiv.empty();
+    resultText.empty();
+}
+
 function handleSpinEnd(element) {
     console.log("handleSpinEnd")
     console.log(element);
-    var resultContainer = $("#machine1Result");
+    var resultContainer = $("#spin-result-description-container");
+
 
     var name = $(element).attr("name");
     console.log("name = " + name);
-    resultContainer.text(name)
+    var resultText = $("#spin-result-text", resultContainer)
+    resultText.text(name)
 
+    drawDemoChart();
 }
 
 function weightedChoice(data) {
@@ -178,6 +221,7 @@ function setupMain() {
     }
 
     $("#spinButton").click(function(){
+        clearSpinResults();
         machine1.shuffle(5, onComplete);
     })
 }
@@ -234,7 +278,6 @@ function setupConfig() {
 
 $(document).ready(function() {
     $(".initial-hide").hide();
-
     setupMain();
     setupProfile();
     setupConfig();    
