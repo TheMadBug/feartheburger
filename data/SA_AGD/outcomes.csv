@@ -1,5 +1,5 @@
 id,name,text,category,icon
-assault,"Offences against the person, excluding sexual",,CRIME,punch.png
+assault,"Offences against the person, excluding sexual",,CRIME,fist.png
 "sexual offences (non-rape)","Sexual assaults (excluding rape)",,CRIME,criminal-wearing-eye-piece-and-striped-top.png
 rape,Rape,,CRIME,criminal-wearing-eye-piece-and-striped-top.png
 robbery,"Robbery and extortion offences",,CRIME,criminal-wearing-eye-piece-and-striped-top.png
