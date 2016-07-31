@@ -1,0 +1,5 @@
+id,name,text,category,icon
+shark,"Shark Deaths",DEATH,"shark.png"
+crocodile,"Crocodile Deaths",DEATH,"australian-alligator.png"
+snake,"Snake Deaths",DEATH,"snake.png"
+jellyfish,"Jellyfish",DEATH,"jellyfish.png"

@@ -58,3 +58,8 @@
     bottom: 0px;
     width: 100%;
 }
+
+#spin-result-name {
+    font-size: 4em;
+    font-weight: bold;
+}
