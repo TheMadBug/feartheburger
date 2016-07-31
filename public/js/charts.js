@@ -1,4 +1,5 @@
 GRAPH_HEIGHT_PER_DATA_ELEMENT = 35;
+MIN_GRAPH_WIDTH = 500;
 
 // Load the Visualization API and the corechart package.
 console.log("Loading charts...");
@@ -7,7 +8,15 @@ google.charts.setOnLoadCallback(function() {
     console.log("charts loaded");
 });
 
-console.log("Finished Loading charts...");
+
+function getChartWidth() {
+    var width = "80%";
+    if (window.innerWidth < MIN_GRAPH_WIDTH) {
+        width = MIN_GRAPH_WIDTH + "px";
+    }
+    console.log("width = " + width);
+    return width;    
+}
 
 function getRisk(data) {
     var causeRisk = [];
@@ -47,10 +56,11 @@ function drawRiskChart(chartDiv, data, spunResult) {
 
     var options = {
         title: title,
-        width: '80%',
+        width: getChartWidth(),
         height: height,
         bar: {groupWidth: "95%"},
         legend: { position: "none" },
+        chartArea: {  width: "50%", height: "70%" },
     };
     var chart = new google.visualization.BarChart(chartDiv);
     chart.draw(view, options);
@@ -96,12 +106,15 @@ function drawComparisonChart(chartDiv, data, demoA, demoB, spunResult) {
     var title = getDemographicText(demoA) + " vs " + getDemographicText(demoB);
     var height = causeDiff.length * GRAPH_HEIGHT_PER_DATA_ELEMENT;
 
+    console.log("window.width = " + window.width);
+    
     var options = {
         title: title,
-        width: '80%',
+        width: getChartWidth(),
         height: height,
         bar: {groupWidth: "95%"},
         legend: { position: "none" },
+        chartArea: {  width: "50%", height: "70%" },
     };
     var chart = new google.visualization.BarChart(chartDiv);
     chart.draw(view, options);
