@@ -17,7 +17,7 @@ All diseases of the skin and subcutaneous tissue,All diseases of the skin and su
 "All endocrine, nutritional and metabolic diseases","All endocrine, nutritional and metabolic diseases",,DEATH,skull-and-bones.png
 All external causes of morbidity and mortality,All external causes of morbidity and mortality,,DEATH,skull-and-bones.png
 All mental and behavioural disorders,All mental and behavioural disorders,,DEATH,brain-speech-bubble.png
-All neoplasms,All neoplasms,,DEATH,skull-and-bones.png
+All neoplasms,All neoplasms,"<a href=""http://www.cancer.org.au/"">Cancer Council</a>",DEATH,ribbon.png
 "All pregnancy, childbirth and the puerperium","All pregnancy, childbirth and the puerperium",,DEATH,female-reproductive-system-representation.png
 Assault,Assault,,DEATH,breath.png
 Asthma,Asthma,,DEATH,skull-and-bones.png
@@ -25,22 +25,22 @@ Breast cancer,Breast cancer,,DEATH,ribbon.png
 Cerebrovascular disease,Cerebrovascular disease,,DEATH,skull-and-bones.png
 Chronic kidney disease,Chronic kidney disease,,DEATH,skull-and-bones.png
 Chronic obstructive pulmonary disease,Chronic obstructive pulmonary disease,,DEATH,lungs.png
-Colorectal cancer,Colorectal cancer,,DEATH,ribbon.png
-Coronary heart disease,Coronary heart disease,,DEATH,pulse.png
-Dementia and Alzheimer disease,Dementia and Alzheimer disease,,DEATH,brain-speech-bubble.png
-Diabetes,Diabetes,,DEATH,blood-drop.png
-Heart failure,Heart failure,,DEATH,pulse.png
+Colorectal cancer,Colorectal cancer,"<a href=""http://www.cancer.org.au/"">Cancer Council</a>",DEATH,ribbon.png
+Coronary heart disease,Coronary heart disease,"<a href=""http://www.heartfoundation.org.au/"">Heart Foundation</a>",DEATH,pulse.png
+Dementia and Alzheimer disease,Dementia and Alzheimer disease,"Get more info at <a href=""https://www.fightdementia.org.au/about-dementia/what-is-dementia"">Fight Dementia</a>",DEATH,brain-speech-bubble.png
+Diabetes,Diabetes,"<a href=""https://www.diabetesaustralia.com.au/about-diabetes"">Diabetes Australia</a>",DEATH,blood-drop.png
+Heart failure,Heart failure,"<a href=""http://www.heartfoundation.org.au/"">Heart Foundation</a>",DEATH,pulse.png
 Hypertensive disease,Hypertensive disease,,DEATH,skull-and-bones.png
 Influenza and pneumonia,Influenza and pneumonia,,DEATH,virus.png
 Kidney failure,Kidney failure,,DEATH,skull-and-bones.png
 Land transport accidents,Land transport accidents,,DEATH,car-insurance.png
 Liver disease,Liver disease,,DEATH,skull-and-bones.png
-Lung cancer,Lung cancer,,DEATH,lungs.png
+Lung cancer,Lung cancer,"Are you a smoker? Try <a href=""http://www.quit.org.au/"">Quitline</a>",DEATH,lungs.png
 Melanoma,Melanoma,,DEATH,sun.png
 Osteoarthritis,Osteoarthritis,,DEATH,skull-and-bones.png
 Osteoporosis,Osteoporosis,,DEATH,skull-and-bones.png
-Pancreatic cancer,Pancreatic cancer,,DEATH,ribbon.png
-Prostate cancer,Prostate cancer,,DEATH,ribbon.png
+Pancreatic cancer,Pancreatic cancer,"<a href=""http://www.cancer.org.au/"">Cancer Council</a>",DEATH,ribbon.png
+Prostate cancer,Prostate cancer,"<a href=""http://www.cancer.org.au/"">Cancer Council</a>",DEATH,ribbon.png
 Rheumatoid arthritis,Rheumatoid arthritis,,DEATH,skull-and-bones.png
 Stroke,Stroke,,DEATH,skull-and-bones.png
-Suicide,Suicide,,DEATH,sad.png
+Suicide,Suicide,"<a href=""https://www.suicideline.org.au/"">Suicide Line</a>",DEATH,sad.png
