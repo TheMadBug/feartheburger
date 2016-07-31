@@ -19,6 +19,34 @@ function randomElement(myArray) {
     return myArray[i];
 }
 
+function getOptions(selectSelect) {
+    var options = [];
+    $("option", selectSelect).each(function() {
+        options.push($(this).val());
+    });
+    return options;    
+}
+
+function getRandomDemographic() {
+    var gender = randomElement(Object.keys(GENDER_LOOKUP));
+    var age = randomElement(getOptions("#age-select"));    
+    var state = randomElement(getOptions("#state-select"));    
+    var regional = Math.round(Math.random()) == true;
+
+    var randProfile = {
+        gender: gender,
+        age: age,
+        state: state,
+        regional: regional,
+    };
+
+    var randomDemographic = getDemoDict(randProfile);
+    console.log("randomDemographic");
+    console.log(randomDemographic);
+    return randomDemographic;
+}
+
+
 function setDemographicText() {
     var age = userProfile['age'];
     var gender = userProfile['gender'];
@@ -43,8 +71,7 @@ function setDemographicText() {
     $("#demographic-display").text(demographicText || 'Average Australian');
 }
 
-
-function getOutcomes(category, callBackFunc) {
+function getDemoDict(userProfile) {
     var DEMO_KEYS = ["gender", "age", "state", "regional"];
     var demo = {};
     for (var i=0 ; i<DEMO_KEYS.length ; ++i) {
@@ -54,7 +81,11 @@ function getOutcomes(category, callBackFunc) {
             demo[k] = val;
         }
     }
+    return demo;
+}
 
+function getOutcomes(category, callBackFunc) {
+    var demo = getDemoDict(userProfile);
     var demoStr = 'demo=' + encodeURIComponent( JSON.stringify( demo ));
     var categoryStr = '&category=' + category;
     var url = '/outcomesFor?' + demoStr + categoryStr;
