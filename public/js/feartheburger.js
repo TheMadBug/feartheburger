@@ -20,7 +20,7 @@ function setDemographicText() {
 
 function getOutcomes(category, callBackFunc) {
     var demo = getDemoDict(userProfile);
-    var demoStr = 'demo=' + encodeURIComponent( JSON.stringify( demo ));
+    var demoStr = 'demo=' + encodeURIComponent(JSON.stringify(demo));
     var categoryStr = '&category=' + category;
     var url = '/outcomesFor?' + demoStr + categoryStr;
     $.get(url, callBackFunc);
@@ -70,8 +70,8 @@ function loadRiskChart(category, spunResult) {
 function loadCompareChart(category, spunResult) {
     var demo = getDemoDict(userProfile);
     var randomDemo = getRandomDemographic();
-    var demoAStr = 'demoA=' + encodeURIComponent( JSON.stringify( demo ));
-    var demoBStr = '&demoB=' + encodeURIComponent( JSON.stringify( randomDemo ));
+    var demoAStr = 'demoA=' + encodeURIComponent(JSON.stringify(demo));
+    var demoBStr = '&demoB=' + encodeURIComponent(JSON.stringify(randomDemo));
     var categoryStr = '&category=' + category;
     var url = '/outcomesCompare?' + demoAStr + demoBStr + categoryStr;
     $.get(url, function(data) {
@@ -127,14 +127,14 @@ function setupMain(category) {
 
         var slotElements = [];
 
-        for (var i=0 ; i<NUM_SLOT_ELEMENTS; ++i) {
+        for (var i = 0; i < NUM_SLOT_ELEMENTS; ++i) {
             var choice = weightedChoice(data);
             // console.log("choice=" + choice["name"]);
             slotElements.push(choice);
         }
 
         var totalChance = 0;
-        for (var i=0 ; i<slotElements.length ; ++i) {
+        for (var i = 0; i < slotElements.length; ++i) {
             var record = slotElements[i];
             if (record["valid"] && record["icon"]) {
                 var outcome = record["outcome"];
@@ -155,9 +155,9 @@ function setupMain(category) {
         console.log("total chance = " + totalChance);
 
         machine1 = $("#machine1").slotMachine({
-            active	: 0,
-            delay	: 500,
-            randomize : function(activeElementIndex) {
+            active: 0,
+            delay: 500,
+            randomize: function(activeElementIndex) {
                 // Compensates for the 1 added from FAKE_TOP
                 return 1 + Math.floor(Math.random() * slotElements.length);
             }
@@ -169,11 +169,11 @@ function setupMain(category) {
 
     function onComplete(active) {
         var container = $(".slotMachineContainer", "#machine1");
-        var selectdChild = container.children()[active+1];
+        var selectdChild = container.children()[active + 1];
         handleSpinEnd(category, selectdChild);
     }
 
-    $("#spinButton").click(function(){
+    $("#spinButton").click(function() {
         clearSpinResults();
         machine1.shuffle(5, onComplete);
     })
@@ -228,10 +228,28 @@ function setupConfig() {
     });
 }
 
+function setMachineSize() {
+    var w = $(window).width();
+    var h = $(window).height();
+
+    if (h < w) {
+        //use height as main
+        h -= 210;
+        w = h * 1.2;
+    } else {
+        //use width as main
+        w -= 36;
+        h = w * 0.83;
+        $(".randomizeMachine").css('width', ($(window).width() * .89) + 'px');
+    }
+    $(".randomizeMachine").css('width', w + 'px');
+    $(".randomizeMachine").css('height', h + 'px');
+}
 
 $(document).ready(function() {
+    setMachineSize();
     $(".initial-hide").hide();
     setupMain("DEATH");
     setupProfile();
-    setupConfig();    
+    setupConfig();
 });
