@@ -163,7 +163,11 @@ Datastore.init = function(cb) {
     })
 }
 
-Datastore.compareChances = function(personA, personB) {
+Datastore.compareChances = function(personA, personB, minChance) {
+    if (!(minChance)) {
+        minChance = 0.00001
+    }
+
     var personAChances = Datastore.chancesFor(personA)
     var personBChances = Datastore.chancesFor(personB)
 
@@ -190,8 +194,16 @@ Datastore.compareChances = function(personA, personB) {
         var row = allOutcomes[key]
         outcomeArray.push( allOutcomes[key] )
         row.chanceDiff = row.chanceA - row.chanceB
+        if (row.chanceA > row.chanceB) {
+            row.chanceDiffP = -(row.chanceA / row.chanceB)
+        } else if (row.chanceB > row.chanceA) {
+            row.chanceDiffP = -(row.chanceB / row.chanceA)
+        } else {
+            row.chanceDiffP = 0
+        }
         delete row['chance']
     })
+    outcomeArray = outcomeArray.filter(row => { return ((row.chanceA >= minChance || row.chanceB >= minChance) && row.chanceDiffP != 0) })
     outcomeArray = outcomeArray.sort((a, b) => { return b.chanceDiff - a.chanceDiff})
     return outcomeArray
 }
