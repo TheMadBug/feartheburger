@@ -5,6 +5,7 @@ window.userProfile = {
     regional: null,
 };
 
+AUTO_SCROLL_TO_RESULTS_SECONDS = 1.5;
 NUM_SLOT_ELEMENTS = 10;
 IMG_PATH = "/img/flat/";
 
@@ -38,15 +39,7 @@ function showButton(buttonSelect) {
 }
 
 function clearSpinResults() {
-    var resultContainer = $("#spin-result-description-container");
-    var chartContainers = $(".chart-container", resultContainer)
-    var resultName = $("#spin-result-name", resultContainer)
-    var resultText = $("#spin-result-text", resultContainer)
-
-    chartContainers.empty();
-    resultName.empty();
-    resultText.empty();
-
+    $('.result-container').empty();
 }
 
 
@@ -83,10 +76,23 @@ function loadCompareChart(category, spunResult) {
 
 function handleSpinEnd(category, element) {
     var spunResult = $(element);
+    console.log("spunResult");
+    console.log(spunResult);
     var resultContainer = $("#spin-result-description-container");
+
+    setTimeout(function() {
+
+        $('html, body').animate({
+            scrollTop: $(resultContainer).offset().top
+        }, 2000);
+    }, AUTO_SCROLL_TO_RESULTS_SECONDS * 1000);
+
     var name = spunResult.attr("name");
     var resultName = $("#spin-result-name", resultContainer)
     resultName.text(name)
+
+    var img = spunResult.clone();
+    $("#spin-result-img-container").append(img);
 
     var text = spunResult.attr("text");
     var resultText = $("#spin-result-text", resultContainer)
