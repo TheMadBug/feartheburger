@@ -1,13 +1,13 @@
 id,name,text,category,icon
-assault,"Offences against the person, excluding sexual",,CRIME,crime.png
-"sexual offences (non-rape)","Sexual assaults (excluding rape)",,CRIME,crime.png
-rape,Rape,,CRIME,crime.png
-robbery,"Robbery and extortion offences",,CRIME,crime.png
-arson,"Arson and explosives",,CRIME,crime.png
-"property damage","Property damage and environmental offences",,CRIME,crime.png
-"criminal trepass","Serious criminal tresspass / break and enter",,CRIME,crime.png
-"other offenses against property","All other offences against property",,CRIME,crime.png
-"drug offences","Drug offences",,CRIME,crime.png
-"driving under alcohol drugs","Driving under influence of alcohol or drugs",,CRIME,car.png
+assault,"Offences against the person, excluding sexual",,CRIME,punch.png
+"sexual offences (non-rape)","Sexual assaults (excluding rape)",,CRIME,criminal-wearing-eye-piece-and-striped-top.png
+rape,Rape,,CRIME,criminal-wearing-eye-piece-and-striped-top.png
+robbery,"Robbery and extortion offences",,CRIME,criminal-wearing-eye-piece-and-striped-top.png
+arson,"Arson and explosives",,CRIME,criminal-wearing-eye-piece-and-striped-top.png
+"property damage","Property damage and environmental offences",,CRIME,home-insurance.png
+"criminal trepass","Serious criminal tresspass / break and enter",,CRIME,criminal-wearing-eye-piece-and-striped-top.png
+"other offenses against property","All other offences against property",,CRIME,home-insurance.png
+"drug offences","Drug offences",,CRIME,antibiotic.png
+"driving under alcohol drugs","Driving under influence of alcohol or drugs",,CRIME,drinking.png
 "dangerous driving","Dangerous driving",,CRIME,car.png
 "other driving offences","Other driving related offences",,CRIME,car.png
