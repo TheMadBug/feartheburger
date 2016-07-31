@@ -265,7 +265,6 @@ function setupConfig() {
 
 $(document).ready(function() {
     $(".initial-hide").hide();
-
     setupMain();
     setupProfile();
     setupConfig();    
