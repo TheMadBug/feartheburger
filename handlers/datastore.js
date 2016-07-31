@@ -8,6 +8,8 @@ Datastore.outcomeTypesCollection = null;
 Datastore.chancesCollection = null;
 Datastore.populationCollection = null;
 
+var matchingColumns = ['gender','state','regional','age']
+
 Datastore.parsePopulation = function(filename, cb) {
     Datastore.parse(filename, (error, rows) => {
         if (error) { return cb(error) }
@@ -43,10 +45,8 @@ Datastore.populationRowsFor = function(row) {
 Datastore.parseAbsolute = function(filename, cb) {
     Datastore.parse(filename, (error, rows) => {
         if (error) { return cb(error) }
-        matchingColumns = ['gender','state','regional','age']
 
-        var chanceRows = rows.filter(row => {return row.chance})
-        var populationRows =  rows.filter(row => {return row.number > 0 && !row.chance}).map(row => {
+        var populationRows = rows.filter(row => {return row.number > 0 && !row.chance}).map(row => {
             var ands = [];
             Object.keys(row).forEach(k => {
                 if (matchingColumns.indexOf(k) != -1) {
@@ -55,13 +55,12 @@ Datastore.parseAbsolute = function(filename, cb) {
                     ands.push( query )
                 }
             })
-            var relevantRows = Datastore.populationCollection.find({$and: ands})
-            var totalNumber = relevantRows.map(row => row.number).reduce((p,c) => {return p + c},0)
-
-            var chance = row.number / totalNumber
-
-            row.chance = chance
             return row
+        })
+        var chanceRows = rows.filter(row => {return row.chance}).map(row => {
+            var populationFor = Datastore.populationRowsFor(row).reduce((p,c) => {return p + c.number} ,0)
+            row.number = row.chance * populationFor
+            // console.log(`reverse chance to be number by multiplying ${populationFor} by ${row.chance}`)
         })
         
         cb(null, populationRows.concat(chanceRows))
@@ -164,7 +163,7 @@ Datastore.compareChances = function(personA, personB) {
 
     var allOutcomes = {}    
     personAChances.forEach(out => {
-        allOutcomes[out.outcome] = out
+        allOutcomes[out.outcome] = Object.assign({},out)
         out.chanceA = out.chance
         out.chanceB = 0
         delete out['chance']
@@ -174,7 +173,7 @@ Datastore.compareChances = function(personA, personB) {
         if (existing) {
             existing.chanceB = out.chance
         } else {
-            allOutcomes[out.outcome] = out
+            allOutcomes[out.outcome] = Object.assign({},out)
             out.chanceA = 0
             out.chanceB = out.chance
             delete out['chance']
@@ -182,7 +181,7 @@ Datastore.compareChances = function(personA, personB) {
     })
     var outcomeArray = []
     Object.keys(allOutcomes).forEach(key => {
-        let row = allOutcomes[key]
+        var row = allOutcomes[key]
         outcomeArray.push( allOutcomes[key] )
         row.chanceDiff = row.chanceA - row.chanceB
     })
@@ -191,6 +190,9 @@ Datastore.compareChances = function(personA, personB) {
 }
 
 Datastore.chancesFor = function(person) {
+    
+    var population = Datastore.populationRowsFor( person ).reduce((p,c) => { return p + c.number}, 0)
+
     var queryAnds = []
     Object.keys(person).forEach(key => {
         var value = person[key];
@@ -215,24 +217,23 @@ Datastore.chancesFor = function(person) {
     var query = {$and: queryAnds}
     var rows = Datastore.chancesCollection.find(query)
 
-    console.log(`All relevant rows length = ${rows.length}`)
 
     var uniqueRows = []
     var uniqueRowMap = {};
     rows.forEach(row => {
         if (uniqueRowMap[row.outcome]) {
             // combine the numbers
-            uniqueRowMap[row.outcome].chance += row.chance
+            uniqueRowMap[row.outcome].number += row.number
         } else {
-            uniqueRowMap[row.outcome] = row;
+            uniqueRowMap[row.outcome] = Object.assign({},row);
             uniqueRows.push(row)
         }
     })
 
-    let cleanRows = uniqueRows.map(row => {
+    var cleanRows = uniqueRows.map(row => {
         var output = {}
         output.outcome = row.outcome
-        output.chance = row.chance
+        output.chance = row.number / population
         var outcomeRow = Datastore.outcomeTypesCollection.findOne({id: row.outcome})
         if (outcomeRow) {
             output.valid = true;

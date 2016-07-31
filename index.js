@@ -52,6 +52,9 @@ app.get('/populationFor', function(req, res) {
 
   var results = Datastore.populationRowsFor( demo )
 
+  var total = results.reduce((p,c) => { return p+c.number },0)
+  results.push({total:total})
+
   res.setHeader('Content-Type', 'application/json');
   res.send( JSON.stringify(results) )
 })
