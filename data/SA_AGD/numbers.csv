@@ -23,3 +23,5 @@ arson,SA,false,0.0014
 "driving under alcohol drugs",SA,false,0.00415
 "dangerous driving",SA,false,0.00129
 "other driving offences",SA,false,0.00769
+"homocide",SA,true,0.00005
+"homocide",SA,false,0.00003
