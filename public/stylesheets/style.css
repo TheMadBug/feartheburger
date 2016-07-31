@@ -64,3 +64,13 @@
     font-size: 1.5em;
     font-weight: bold;
 }
+
+#spin-result-description-container {
+    margin-top: 10px;
+}
+
+#spin-result-img-container {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
