@@ -114,6 +114,7 @@ function drawComparisonChart(chartDiv, data, demoA, demoB, spunResult) {
         height: height,
         bar: { groupWidth: "95%" },
         legend: { position: "none" },
+        vAxis: { textStyle: { fontSize: 8 } },
         chartArea: { width: "50%", height: "70%" },
     };
     var chart = new google.visualization.BarChart(chartDiv);
