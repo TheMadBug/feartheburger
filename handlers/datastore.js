@@ -46,6 +46,12 @@ Datastore.parseAbsolute = function(filename, cb) {
     Datastore.parse(filename, (error, rows) => {
         if (error) { return cb(error) }
 
+        rows.forEach(row => {
+            if (row.regional) {
+                row.regional = row.regional === 'TRUE' || row.regional === 'true'
+            }
+        })
+
         var populationRows = rows.filter(row => {return row.number > 0 && !row.chance}).map(row => {
             var ands = [];
             Object.keys(row).forEach(k => {
