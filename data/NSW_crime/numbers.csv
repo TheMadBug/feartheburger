@@ -1,0 +1,21 @@
+outcome,regional,number
+assault,TRUE,43346
+assault,FALSE,51887
+"sexual offences (non-rape)",TRUE,2574
+"sexual offences (non-rape)",FALSE,3072
+rape,TRUE,2384
+rape,FALSE,2245
+robbery,TRUE,1047
+robbery,FALSE,3507
+arson,TRUE,4044
+arson,FALSE,2957
+"property damage",TRUE,38527
+"property damage",FALSE,43934
+"drug offences",TRUE,16907
+"drug offences",FALSE,26719
+theft,FALSE,158888
+theft,TRUE,99345
+homicide,TRUE,35
+homicide,FALSE,75
+driving,FALSE,52154
+driving,TRUE,6702

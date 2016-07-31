@@ -1,0 +1,11 @@
+id,name,text,category,icon
+assault,"Offences against the person, excluding sexual",,CRIME,crime.png
+"sexual offences (non-rape)","Sexual assaults (excluding rape)",,CRIME,crime.png
+rape,Rape,,CRIME,crime.png
+robbery,"Robbery and extortion offences",,CRIME,crime.png
+arson,"Arson and explosives",,CRIME,crime.png
+"property damage","Property damage and environmental offences",,CRIME,crime.png
+"drug offences","Drug offences",,CRIME,crime.png
+homocide,Homocide,,CRIME,crime.png
+driving,"Transport regulatory offences",,CRIME,crime.png
+theft,Theft,,CRIME,crime.png
