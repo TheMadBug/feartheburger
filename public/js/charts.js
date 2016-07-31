@@ -1,3 +1,5 @@
+GRAPH_HEIGHT_PER_DATA_ELEMENT = 35;
+
 // Load the Visualization API and the corechart package.
 console.log("Loading charts...");
 google.charts.load('current', {'packages':['corechart']});
@@ -6,6 +8,55 @@ google.charts.setOnLoadCallback(function() {
 });
 
 console.log("Finished Loading charts...");
+
+function getRisk(data) {
+    var causeRisk = [];
+    for (var i=0 ; i<data.length ; ++i) {
+        var row = data[i];
+        var name = row['name'];
+        var chance = row['chance'];
+        if (chance != null) {
+            causeRisk.push([name, chance]);
+        }
+    }
+    return causeRisk;
+}
+
+function drawRiskChart(chartDiv, data, spunResult) {
+    var spunName = spunResult.attr("name");
+    var causeRisk = getRisk(data);
+
+    console.log("spunName: " + spunName);
+
+    // Add color based on value
+    for (var i=0 ; i<causeRisk.length ; ++i) {
+        var row = causeRisk[i];
+        var style = 'opacity: 0.5; color: grey';
+        if (row[0] == spunName) {
+            style = 'opacity: 0.8; color: black';
+        }        
+        row.push(style)
+    }
+
+    var jsArray = [['Cause', 'Risk', { role: 'style' } ]].concat(causeRisk);
+    var data = google.visualization.arrayToDataTable(jsArray);
+
+    var view = new google.visualization.DataView(data);
+    var title = "Risks of death";
+    var height = causeRisk.length * GRAPH_HEIGHT_PER_DATA_ELEMENT;
+
+    var options = {
+        title: title,
+        width: '80%',
+        height: height,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+    };
+    var chart = new google.visualization.BarChart(chartDiv);
+    chart.draw(view, options);
+}
+
+
 
 function getCauseDiff(data) {
     var causeDiff = [];
@@ -20,12 +71,7 @@ function getCauseDiff(data) {
     return causeDiff;
 }
 
-console.log("defining drawComparisonChart");
-
-function drawComparisonChart(data, demoA, demoB, spunResult) {
-    console.log("drawComparisonChart");
-    console.log(demoA);
-
+function drawComparisonChart(chartDiv, data, demoA, demoB, spunResult) {
     var causeDiff = getCauseDiff(data);
     if (causeDiff.length == 0) {
         console.log("Empty cause diff!!!");
@@ -47,25 +93,17 @@ function drawComparisonChart(data, demoA, demoB, spunResult) {
     var data = google.visualization.arrayToDataTable(jsArray);
 
     var view = new google.visualization.DataView(data);
-    view.setColumns([0, 1,
-                    { calc: "stringify",
-                        sourceColumn: 1,
-                        type: "string",
-                        role: "annotation" },
-                    2]);
-
     var title = getDemographicText(demoA) + " vs " + getDemographicText(demoB);
+    var height = causeDiff.length * GRAPH_HEIGHT_PER_DATA_ELEMENT;
 
     var options = {
         title: title,
-        width: 600,
-        height: 400,
+        width: '80%',
+        height: height,
         bar: {groupWidth: "95%"},
         legend: { position: "none" },
     };
-    var container = document.getElementById('chart_div');
-
-    var chart = new google.visualization.BarChart(container);
+    var chart = new google.visualization.BarChart(chartDiv);
     chart.draw(view, options);
 }
 

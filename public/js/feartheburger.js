@@ -8,7 +8,6 @@ window.userProfile = {
 NUM_SLOT_ELEMENTS = 10;
 IMG_PATH = "/img/flat/";
 
-
 // We put 1 of these on the top - but they can never be picked (we rig the slot machine function in randomizeSlotMachine)
 // The normal shark/terrorism etc will be added in per normal odds so it could be picked
 FAKE_TOP = ['shark2.png', 'terrorism.png'];
@@ -40,15 +39,38 @@ function showButton(buttonSelect) {
 
 function clearSpinResults() {
     var resultContainer = $("#spin-result-description-container");
-    var chartDiv = $("#chart_div", resultContainer)
+    var chartContainers = $(".chart-container", resultContainer)
+    var resultName = $("#spin-result-name", resultContainer)
     var resultText = $("#spin-result-text", resultContainer)
 
-    chartDiv.empty();
+    chartContainers.empty();
+    resultName.empty();
     resultText.empty();
+
 }
 
 
 function drawCharts(category, spunResult) {
+
+    loadRiskChart(category, spunResult);
+    loadCompareChart(category, spunResult);
+
+}
+
+
+function loadRiskChart(category, spunResult) {
+    // TODO: This is a 2nd API call - same as we used to populate spinner, can we do both?
+    getOutcomes(category, function(data) {
+        console.log("risk data");
+        console.log(data);
+
+        var chartDiv = document.getElementById('risk-chart');
+        drawRiskChart(chartDiv, data, spunResult);
+    });
+}
+
+
+function loadCompareChart(category, spunResult) {
     var demo = getDemoDict(userProfile);
     var randomDemo = getRandomDemographic();
     var demoAStr = 'demoA=' + encodeURIComponent( JSON.stringify( demo ));
@@ -56,38 +78,38 @@ function drawCharts(category, spunResult) {
     var categoryStr = '&category=' + category;
     var url = '/outcomesCompare?' + demoAStr + demoBStr + categoryStr;
     $.get(url, function(data) {
-        console.log("comparison data");
-        console.log(data);
-        drawComparisonChart(data, demo, randomDemo, spunResult);
+        var chartDiv = document.getElementById('compare-chart');
+        drawComparisonChart(chartDiv, data, demo, randomDemo, spunResult);
     });
-
 }
 
 
-
 function handleSpinEnd(category, element) {
-    console.log("handleSpinEnd")
-    console.log(element);
     var spunResult = $(element);
     var resultContainer = $("#spin-result-description-container");
     var name = spunResult.attr("name");
-    console.log("name = " + name);
-    var resultText = $("#spin-result-text", resultContainer)
-    resultText.text(name)
+    var resultName = $("#spin-result-name", resultContainer)
+    resultName.text(name)
 
+    var text = spunResult.attr("text");
+    var resultText = $("#spin-result-text", resultContainer)
+    if (text) {
+        console.log("set innerHtml");
+        resultText.html(text);
+    }
     drawCharts(category, spunResult);
 }
 
 
 
-
-
 function addCauseToSlotMachine(img_path, name) {
-    jQuery('<img/>', {
+    var e = jQuery('<img/>', {
         src: img_path,
         class: 'cause-of-death-image',
         name: name,
-    }).appendTo('#machine1');
+    });
+    e.appendTo('#machine1');
+    return e;
 }
 
 function setupMain(category) {
@@ -129,7 +151,8 @@ function setupMain(category) {
                 totalChance += chance;
 
                 var img_path = IMG_PATH + record["icon"];
-                addCauseToSlotMachine(img_path, name);
+                var img = addCauseToSlotMachine(img_path, name);
+                img.attr("text", text);
             }
         }
 
