@@ -92,6 +92,9 @@ function handleSpinEnd(category, element) {
     resultName.text(name)
 
     var img = spunResult.clone();
+    img.height("50px")
+    img.width("50px")
+
     $("#spin-result-img-container").append(img);
 
     var text = spunResult.attr("text");
@@ -105,10 +108,15 @@ function handleSpinEnd(category, element) {
 
 
 function addCauseToSlotMachine(img_path, name) {
+    var width = $(".randomizeMachine").width() * .8;
+    var height = $(".randomizeMachine").height() * .8;
+
+    var style = "width: " + width + " px; height: " + height + "px";
     var e = jQuery('<img/>', {
         src: img_path,
         class: 'cause-of-death-image',
         name: name,
+        style: style,
     });
     e.appendTo('#machine1');
     return e;
@@ -247,10 +255,10 @@ function setMachineSize() {
         //use width as main
         w -= 36;
         h = w * 0.83;
-        $(".randomizeMachine").css('width', ($(window).width() * .89) + 'px');
+        $(".randomizeMachine").css('width', Math.floor($(window).width() * .89) + 'px');
     }
-    $(".randomizeMachine").css('width', w + 'px');
-    $(".randomizeMachine").css('height', h + 'px');
+    $(".randomizeMachine").css('width', Math.floor(w) + 'px');
+    $(".randomizeMachine").css('height', Math.floor(h) + 'px');
 }
 
 $(document).ready(function() {
