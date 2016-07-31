@@ -5,7 +5,7 @@ window.userProfile = {
     regional: null,
 };
 
-AUTO_SCROLL_TO_RESULTS_SECONDS = 1.5;
+AUTO_SCROLL_TO_RESULTS_SECONDS = 1;
 NUM_SLOT_ELEMENTS = 10;
 IMG_PATH = "/img/flat/";
 
@@ -83,7 +83,7 @@ function handleSpinEnd(category, element) {
     setTimeout(function() {
 
         $('html, body').animate({
-            scrollTop: $(resultContainer).offset().top
+            scrollTop: $(resultContainer).offset().top - $(".navbar").height() - 5
         }, 2000);
     }, AUTO_SCROLL_TO_RESULTS_SECONDS * 1000);
 
