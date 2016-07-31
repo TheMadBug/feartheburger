@@ -169,20 +169,20 @@ Datastore.compareChances = function(personA, personB) {
 
     var allOutcomes = {}    
     personAChances.forEach(out => {
-        allOutcomes[out.outcome] = Object.assign({},out)
-        out.chanceA = out.chance
-        out.chanceB = 0
-        delete out['chance']
+        var copy = Object.assign({},out)
+        allOutcomes[out.outcome] = copy
+        copy.chanceA = out.chance
+        copy.chanceB = 0
     })
     personBChances.forEach(out => {
         var existing = allOutcomes[out.outcome]
         if (existing) {
             existing.chanceB = out.chance
         } else {
-            allOutcomes[out.outcome] = Object.assign({},out)
-            out.chanceA = 0
-            out.chanceB = out.chance
-            delete out['chance']
+            var copy = Object.assign({},out)
+            allOutcomes[out.outcome] = copy
+            copy.chanceA = 0
+            copy.chanceB = out.chance
         }
     })
     var outcomeArray = []
@@ -190,6 +190,7 @@ Datastore.compareChances = function(personA, personB) {
         var row = allOutcomes[key]
         outcomeArray.push( allOutcomes[key] )
         row.chanceDiff = row.chanceA - row.chanceB
+        delete row['chance']
     })
     outcomeArray = outcomeArray.sort((a, b) => { return b.chanceDiff - a.chanceDiff})
     return outcomeArray
