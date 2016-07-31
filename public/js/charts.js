@@ -7,14 +7,30 @@ google.charts.setOnLoadCallback(function() {
 
 console.log("Finished Loading charts...");
 
-function drawDemoChart() {
+function getCauseDiff(data) {
+    var causeDiff = [];
+    for (var i=0 ; i<data.length ; ++i) {
+        var row = data[i];
+        var name = row['name'];
+        var chanceDiff = row['chanceDiff'];
+        if (chanceDiff != null) {
+            causeDiff.push([name, chanceDiff]);
+        }
+    }
+    return causeDiff;
+}
 
-    // 2 columns - Cause, Difference
-    var causeDiff = [
-        ['Sharks', -10],
-        ['Goblins', -5],
-        ['Terrorists', 20],
-    ];
+console.log("defining drawComparisonChart");
+
+function drawComparisonChart(data, demoA, demoB, spunResult) {
+    console.log("drawComparisonChart");
+    console.log(demoA);
+
+    var causeDiff = getCauseDiff(data);
+    if (causeDiff.length == 0) {
+        console.log("Empty cause diff!!!");
+        return;
+    }
 
     // Add color based on value
     for (var i=0 ; i<causeDiff.length ; ++i) {
@@ -28,7 +44,6 @@ function drawDemoChart() {
     }
 
     var jsArray = [['Cause', 'Diff', { role: 'style' } ]].concat(causeDiff);
-    console.log(jsArray);
     var data = google.visualization.arrayToDataTable(jsArray);
 
     var view = new google.visualization.DataView(data);
@@ -39,8 +54,10 @@ function drawDemoChart() {
                         role: "annotation" },
                     2]);
 
+    var title = getDemographicText(demoA) + " vs " + getDemographicText(demoB);
+
     var options = {
-        title: "How you compare",
+        title: title,
         width: 600,
         height: 400,
         bar: {groupWidth: "95%"},
@@ -51,3 +68,6 @@ function drawDemoChart() {
     var chart = new google.visualization.BarChart(container);
     chart.draw(view, options);
 }
+
+
+

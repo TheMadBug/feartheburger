@@ -7,82 +7,17 @@ window.userProfile = {
 
 NUM_SLOT_ELEMENTS = 10;
 IMG_PATH = "/img/flat/";
-GENDER_LOOKUP = {"M" : "Male", "F" : "Female"};
-REGION_LOOKUP = ["Non-regional", "Regional"];
+
 
 // We put 1 of these on the top - but they can never be picked (we rig the slot machine function in randomizeSlotMachine)
 // The normal shark/terrorism etc will be added in per normal odds so it could be picked
 FAKE_TOP = ['shark2.png', 'terrorism.png'];
 
-function randomElement(myArray) {
-    var i = Math.floor(Math.random() * myArray.length);
-    return myArray[i];
-}
-
-function getOptions(selectSelect) {
-    var options = [];
-    $("option", selectSelect).each(function() {
-        options.push($(this).val());
-    });
-    return options;    
-}
-
-function getRandomDemographic() {
-    var gender = randomElement(Object.keys(GENDER_LOOKUP));
-    var age = randomElement(getOptions("#age-select"));    
-    var state = randomElement(getOptions("#state-select"));    
-    var regional = Math.round(Math.random()) == true;
-
-    var randProfile = {
-        gender: gender,
-        age: age,
-        state: state,
-        regional: regional,
-    };
-
-    var randomDemographic = getDemoDict(randProfile);
-    console.log("randomDemographic");
-    console.log(randomDemographic);
-    return randomDemographic;
-}
-
-
 function setDemographicText() {
-    var age = userProfile['age'];
-    var gender = userProfile['gender'];
-    var state = userProfile['state'];
-    var regional = userProfile['regional'];
-
-    var demographics = [];
-    if (age) {
-        demographics.push(age + ' year old');
-    }
-    if (gender) {
-        demographics.push(GENDER_LOOKUP[gender]);
-    }
-    if (state) {
-        demographics.push(state);
-    }
-    if (regional) {
-        demographics.push(REGION_LOOKUP[1*regional]);
-    }
-
-    var demographicText = demographics.join(', ');
-    $("#demographic-display").text(demographicText || 'Average Australian');
+    var demographicText = getDemographicText(userProfile);
+    $("#demographic-display").text(demographicText);
 }
 
-function getDemoDict(userProfile) {
-    var DEMO_KEYS = ["gender", "age", "state", "regional"];
-    var demo = {};
-    for (var i=0 ; i<DEMO_KEYS.length ; ++i) {
-        var k = DEMO_KEYS[i];
-        var val = userProfile[k];
-        if (val != null) {
-            demo[k] = val;
-        }
-    }
-    return demo;
-}
 
 function getOutcomes(category, callBackFunc) {
     var demo = getDemoDict(userProfile);
@@ -112,38 +47,38 @@ function clearSpinResults() {
     resultText.empty();
 }
 
-function handleSpinEnd(element) {
+
+function drawCharts(category, spunResult) {
+    var demo = getDemoDict(userProfile);
+    var randomDemo = getRandomDemographic();
+    var demoAStr = 'demoA=' + encodeURIComponent( JSON.stringify( demo ));
+    var demoBStr = '&demoB=' + encodeURIComponent( JSON.stringify( randomDemo ));
+    var categoryStr = '&category=' + category;
+    var url = '/outcomesCompare?' + demoAStr + demoBStr + categoryStr;
+    $.get(url, function(data) {
+        console.log("comparison data");
+        console.log(data);
+        drawComparisonChart(data, demo, randomDemo, spunResult);
+    });
+
+}
+
+
+
+function handleSpinEnd(category, element) {
     console.log("handleSpinEnd")
     console.log(element);
+    var spunResult = $(element);
     var resultContainer = $("#spin-result-description-container");
-
-
-    var name = $(element).attr("name");
+    var name = spunResult.attr("name");
     console.log("name = " + name);
     var resultText = $("#spin-result-text", resultContainer)
     resultText.text(name)
 
-    drawDemoChart();
+    drawCharts(category, spunResult);
 }
 
-function weightedChoice(data) {
-    var totals = [];
-    var runningTotal = 0.0;
 
-    for (var i=0 ; i<data.length; ++i) {
-        var record = data[i]
-        runningTotal += record['chance'];
-        totals.push(runningTotal);
-    }
-
-    var r = Math.random() * runningTotal;
-    for (var i=0 ; i<totals.length ; ++i) {
-        if (r < totals[i]) {
-            return data[i];
-        }
-    }
-    console.log("This should never happen");
-}
 
 
 
@@ -155,7 +90,7 @@ function addCauseToSlotMachine(img_path, name) {
     }).appendTo('#machine1');
 }
 
-function setupMain() {
+function setupMain(category) {
     console.log("Setup Main");
 
     // So - need to go through this, and using the chance, pick out X (enough for the )
@@ -176,7 +111,7 @@ function setupMain() {
 
         for (var i=0 ; i<NUM_SLOT_ELEMENTS; ++i) {
             var choice = weightedChoice(data);
-            console.log("choice=" + choice["name"]);
+            // console.log("choice=" + choice["name"]);
             slotElements.push(choice);
         }
 
@@ -210,14 +145,14 @@ function setupMain() {
         });
     };
 
-    getOutcomes("DEATH", populateData);
+    getOutcomes(category, populateData);
 
 
     function onComplete(active) {
         console.log("active=" + active);
         var container = $(".slotMachineContainer", "#machine1");
         var selectdChild = container.children()[active+1];
-        handleSpinEnd(selectdChild);
+        handleSpinEnd(category, selectdChild);
     }
 
     $("#spinButton").click(function(){
@@ -278,7 +213,7 @@ function setupConfig() {
 
 $(document).ready(function() {
     $(".initial-hide").hide();
-    setupMain();
+    setupMain("DEATH");
     setupProfile();
     setupConfig();    
 });
