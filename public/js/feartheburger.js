@@ -215,7 +215,8 @@ function setupProfile() {
         window.userProfile["state"] = state;
         window.userProfile["regional"] = regional;
 
-        console.log("TODO: Trigger reload??")
+        setDemographicText();
+
         selectMain();
     });
 }
