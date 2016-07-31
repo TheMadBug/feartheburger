@@ -14,7 +14,6 @@ function getChartWidth() {
     if (window.innerWidth < MIN_GRAPH_WIDTH) {
         width = MIN_GRAPH_WIDTH + "px";
     }
-    console.log("width = " + width);
     return width;    
 }
 
@@ -34,8 +33,6 @@ function getRisk(data) {
 function drawRiskChart(chartDiv, data, spunResult) {
     var spunName = spunResult.attr("name");
     var causeRisk = getRisk(data);
-
-    console.log("spunName: " + spunName);
 
     // Add color based on value
     for (var i=0 ; i<causeRisk.length ; ++i) {
@@ -105,8 +102,6 @@ function drawComparisonChart(chartDiv, data, demoA, demoB, spunResult) {
     var view = new google.visualization.DataView(data);
     var title = getDemographicText(demoA) + " vs " + getDemographicText(demoB);
     var height = causeDiff.length * GRAPH_HEIGHT_PER_DATA_ELEMENT;
-
-    console.log("window.width = " + window.width);
     
     var options = {
         title: title,

@@ -61,9 +61,6 @@ function drawCharts(category, spunResult) {
 function loadRiskChart(category, spunResult) {
     // TODO: This is a 2nd API call - same as we used to populate spinner, can we do both?
     getOutcomes(category, function(data) {
-        console.log("risk data");
-        console.log(data);
-
         var chartDiv = document.getElementById('risk-chart');
         drawRiskChart(chartDiv, data, spunResult);
     });
@@ -94,7 +91,6 @@ function handleSpinEnd(category, element) {
     var text = spunResult.attr("text");
     var resultText = $("#spin-result-text", resultContainer)
     if (text) {
-        console.log("set innerHtml");
         resultText.html(text);
     }
     drawCharts(category, spunResult);
@@ -172,7 +168,6 @@ function setupMain(category) {
 
 
     function onComplete(active) {
-        console.log("active=" + active);
         var container = $(".slotMachineContainer", "#machine1");
         var selectdChild = container.children()[active+1];
         handleSpinEnd(category, selectdChild);

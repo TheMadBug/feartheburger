@@ -1,0 +1,11 @@
+id,name,text,category,icon
+"crimes against persons","Crimes against the person",,CRIME,punch.png
+"crimes against property","Crimes against property",,CRIME,home-insurance.png
+"drug offences","Drug offences",,CRIME,antibiotic.png
+robber,Robbery,,CRIME,crime.png
+assault,Assault,,CRIME,punch.png
+"property damage","Property damage",,CRIME,criminal-wearing-eye-piece-and-striped-top.png
+burglary,Burglary,,CRIME,criminal-wearing-eye-piece-and-striped-top.png
+theft,Theft,,CRIME,criminal-wearing-eye-piece-and-striped-top.png
+homocide,Homocide,,CRIME,crime.png
+"serious injuries","Serious injuries",,CRIME,punch.png
