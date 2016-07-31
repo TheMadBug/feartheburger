@@ -13,9 +13,6 @@ IMG_PATH = "/img/flat/";
 // The normal shark/terrorism etc will be added in per normal odds so it could be picked
 FAKE_TOP = ['shark2.png', 'terrorism.png'];
 
-
-
-
 function setDemographicText() {
     var demographicText = getDemographicText(userProfile);
     $("#demographic-display").text(demographicText);
@@ -59,7 +56,8 @@ function drawCharts(category, spunResult) {
     var categoryStr = '&category=' + category;
     var url = '/outcomesCompare?' + demoAStr + demoBStr + categoryStr;
     $.get(url, function(data) {
-        console.log(data)
+        console.log("comparison data");
+        console.log(data);
         drawComparisonChart(data, demo, randomDemo, spunResult);
     });
 

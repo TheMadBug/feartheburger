@@ -13,7 +13,9 @@ function getCauseDiff(data) {
         var row = data[i];
         var name = row['name'];
         var chanceDiff = row['chanceDiff'];
-        causeDiff.push([name, chanceDiff]);
+        if (chanceDiff != null) {
+            causeDiff.push([name, chanceDiff]);
+        }
     }
     return causeDiff;
 }
@@ -25,6 +27,10 @@ function drawComparisonChart(data, demoA, demoB, spunResult) {
     console.log(demoA);
 
     var causeDiff = getCauseDiff(data);
+    if (causeDiff.length == 0) {
+        console.log("Empty cause diff!!!");
+        return;
+    }
 
     // Add color based on value
     for (var i=0 ; i<causeDiff.length ; ++i) {
